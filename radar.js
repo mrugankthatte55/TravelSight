@@ -77,109 +77,132 @@ class RadarView {
     }
 
     renderInnerPolygon() {
-        const radiusScale = d3.scaleLinear()
-            .domain([0, 100])
-            .range([0, this.options.innerRadius]);
-
+        const phaseOffset = Math.PI / this.options.sectors;
         const points = this.data.innerData.map((d, i) => {
-            const angle = (i * 2 * Math.PI) / this.options.sectors + Math.PI / this.options.sectors;
-            const radius = radiusScale(d.value);
-            return [
-                radius * Math.cos(angle),
-                radius * Math.sin(angle)
-            ];
+            const angle = (i * 2 * Math.PI) / this.options.sectors + phaseOffset;
+            const radius = (d.value / 100) * this.options.innerRadius;
+            return {
+                x: radius * Math.cos(angle),
+                y: radius * Math.sin(angle),
+                value: d.value,
+                label: d.label
+            };
         });
 
-        // Create polygon path
-        const lineGenerator = d3.lineRadial()
-            .radius(d => d[0])
-            .angle(d => d[1])
-            .curve(d3.curveLinearClosed);
-
-        this.svg.append('path')
+        // Create polygon
+        const polygonPath = points.map(p => `${p.x},${p.y}`).join(' ');
+        this.svg.append('polygon')
             .attr('class', 'inner-polygon')
-            .attr('d', `M ${points.map(p => p.join(',')).join(' L ')} Z`);
+            .attr('points', polygonPath);
 
-        // Add data points
+        // Add vertices with labels
         points.forEach(point => {
+            // Add point
             this.svg.append('circle')
                 .attr('class', 'data-point')
-                .attr('cx', point[0])
-                .attr('cy', point[1])
+                .attr('cx', point.x)
+                .attr('cy', point.y)
                 .attr('r', 4);
+
+            // Add label
+            this.svg.append('text')
+                .attr('class', 'data-point-label')
+                .attr('x', point.x)
+                .attr('y', point.y - 10)
+                .attr('text-anchor', 'middle')
+                .text(point.value);
         });
     }
 
     renderWordClouds() {
-        for (let i = 0; i < this.options.sectors; i++) {
-            const angle = (i * 2 * Math.PI) / this.options.sectors;
-            const centerX = (this.options.innerRadius + this.options.outerRadius) / 2 * Math.cos(angle);
-            const centerY = (this.options.innerRadius + this.options.outerRadius) / 2 * Math.sin(angle);
+        const sectorAngle = (2 * Math.PI) / this.options.sectors;
+    
+        this.data.outerData.forEach((sector, i) => {
+            const startAngle = i * sectorAngle;
+            const centerAngle = startAngle + sectorAngle / 2;
             
-            const words = this.data.outerData[i].words;
-            
-            // Create word cloud
-            const cloud = d3.layout.cloud()
-                .size([80, 80])
-                .words(words.map(d => ({text: d.text, size: 10 + d.value * 20})))
-                .padding(2)
-                .rotate(0)
-                .fontSize(d => d.size)
-                .on("end", (words) => {
-                    const cloudGroup = this.svg.append("g")
-                        .attr("class", "word-cloud")
-                        .attr("transform", `translate(${centerX},${centerY})`);
-
-                    cloudGroup.selectAll("text")
-                        .data(words)
-                        .enter().append("text")
-                        .style("font-size", d => `${d.size}px`)
-                        .style("fill", "#333")
-                        .attr("text-anchor", "middle")
-                        .attr("transform", d => `translate(${d.x},${d.y})`)
-                        .text(d => d.text);
-                });
-
-            cloud.start();
-        }
+            // Adjust this value to move text closer to center
+            // Changed from 0.75 to 0.6 to move text inward
+            const centerRadius = (this.options.innerRadius + this.options.outerRadius) * 0.5;
+            const centerX = centerRadius * Math.cos(centerAngle);
+            const centerY = centerRadius * Math.sin(centerAngle);
+    
+            const cloudGroup = this.svg.append('g')
+                .attr('class', 'word-cloud')
+                .attr('transform', `translate(${centerX},${centerY})`);
+    
+            // Sort words by value to render larger ones first
+            const sortedWords = sector.words.sort((a, b) => b.value - a.value);
+    
+            // Calculate total height of text block
+            const totalHeight = sortedWords.reduce((acc, word) => {
+                const fontSize = 8 + word.value * 3;
+                return acc + fontSize + 2;
+            }, 0);
+    
+            // Add words with adjusted positioning
+            let currentY = -totalHeight / 2;
+            sortedWords.forEach((word, idx) => {
+                const fontSize = 8 + word.value * 3;
+                
+                cloudGroup.append('text')
+                    .attr('x', 0)
+                    .attr('y', currentY + fontSize)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', `${fontSize}px`)
+                    .text(word.text);
+    
+                currentY += fontSize + 2;
+            });
+        });
     }
 }
 
 // Sample data
 const sampleData = {
     innerData: [
-        { value: 75 },
-        { value: 45 },
-        { value: 90 },
+        { value: 80 },
         { value: 60 },
-        { value: 85 }
+        { value: 90 },
+        { value: 40 },
+        { value: 70 }
     ],
     outerData: [
-        { words: [
-            { text: "Data", value: 3 },
-            { text: "Analytics", value: 2 },
-            { text: "ML", value: 1 }
-        ]},
-        { words: [
-            { text: "Cloud", value: 3 },
-            { text: "AWS", value: 2 },
-            { text: "Azure", value: 1 }
-        ]},
-        { words: [
-            { text: "Security", value: 3 },
-            { text: "Network", value: 2 },
-            { text: "Crypto", value: 1 }
-        ]},
-        { words: [
-            { text: "Web", value: 3 },
-            { text: "UI", value: 2 },
-            { text: "UX", value: 1 }
-        ]},
-        { words: [
-            { text: "Mobile", value: 3 },
-            { text: "iOS", value: 2 },
-            { text: "Android", value: 1 }
-        ]}
+        {
+            words: [
+                { text: "Data", value: 5 },
+                { text: "AI", value: 3 },
+                { text: "ML", value: 2 }
+            ]
+        },
+        {
+            words: [
+                { text: "Cloud", value: 4 },
+                { text: "AWS", value: 3 },
+                { text: "Azure", value: 2 }
+            ]
+        },
+        {
+            words: [
+                { text: "Security", value: 5 },
+                { text: "Auth", value: 3 },
+                { text: "Crypto", value: 2 }
+            ]
+        },
+        {
+            words: [
+                { text: "Web", value: 4 },
+                { text: "API", value: 3 },
+                { text: "UI", value: 2 }
+            ]
+        },
+        {
+            words: [
+                { text: "Mobile", value: 5 },
+                { text: "iOS", value: 3 },
+                { text: "React", value: 2 }
+            ]
+        }
     ]
 };
 

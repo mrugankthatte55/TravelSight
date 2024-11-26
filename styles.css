@@ -35,3 +35,15 @@
     font-size: 12px;
     font-family: Arial, sans-serif;
 }
+.data-point-label {
+    font-size: 12px;
+    fill: #333;
+}
+
+.sector-title {
+    font-weight: bold;
+}
+
+.word-cloud text {
+    fill: #333;
+}
