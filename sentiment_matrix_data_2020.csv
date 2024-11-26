@@ -1,4 +1,4 @@
-Destination,Category,Year,Cognitive Theme,Positive Sentiment,Negative Sentiment,Positive Count,Negative Count,Total Count,Non-Emotional Count
+Destination,Category,Year,CognitiveTheme,PositiveSentiment,NegativeSentiment,PositiveCount,NegativeCount,TotalCount,NonEmotionalCount
 Louvre,Museums,2020,Foods,0.75,0.13,74,31,105,7
 Louvre,Museums,2020,Attractions,0.84,0.03,190,37,227,6
 Louvre,Museums,2020,Scenery,0.6,0.16,150,43,193,13

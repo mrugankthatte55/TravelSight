@@ -158,61 +158,90 @@ class RadarView {
     }
 }
 
+function processCSVData(csvData) {
+    // Add console.log to debug the incoming data
+    console.log('Raw CSV data:', csvData);
+
+    const themes = ['Foods', 'Attractions', 'Scenery', 'Services', 'Atmospheres'];
+    
+    return {
+        innerData: themes.map(theme => {
+            const themeData = csvData.find(d => d.Cognitive_Theme === theme);
+            // Add null checking
+            if (!themeData) {
+                console.error(`No data found for theme: ${theme}`);
+                return { value: 0, label: theme };
+            }
+            // Ensure we're getting a number
+            const value = Math.max(0, Math.min(100, Math.round(parseFloat(themeData.Positive_Sentiment) * 100)));
+            return {
+                value: isNaN(value) ? 0 : value,
+                label: theme
+            };
+        }),
+        outerData: themes.map(theme => {
+            const themeData = csvData.find(d => d.Cognitive_Theme === theme);
+            // Add null checking
+            if (!themeData) {
+                console.error(`No data found for theme: ${theme}`);
+                return {
+                    title: theme,
+                    words: [{ text: theme, value: 5 }]
+                };
+            }
+            return {
+                title: theme,
+                words: [
+                    { 
+                        text: theme, 
+                        value: 5 
+                    },
+                    { 
+                        text: `+${parseInt(themeData.Positive_Count) || 0}`, 
+                        value: 3 
+                    },
+                    { 
+                        text: `-${parseInt(themeData.Negative_Count) || 0}`, 
+                        value: 2 
+                    }
+                ]
+            };
+        })
+    };
+}
+
 // Sample data
-const sampleData = {
-    innerData: [
-        { value: 80 },
-        { value: 60 },
-        { value: 90 },
-        { value: 40 },
-        { value: 70 }
-    ],
-    outerData: [
-        {
-            words: [
-                { text: "Data", value: 5 },
-                { text: "AI", value: 3 },
-                { text: "ML", value: 2 }
-            ]
-        },
-        {
-            words: [
-                { text: "Cloud", value: 4 },
-                { text: "AWS", value: 3 },
-                { text: "Azure", value: 2 }
-            ]
-        },
-        {
-            words: [
-                { text: "Security", value: 5 },
-                { text: "Auth", value: 3 },
-                { text: "Crypto", value: 2 }
-            ]
-        },
-        {
-            words: [
-                { text: "Web", value: 4 },
-                { text: "API", value: 3 },
-                { text: "UI", value: 2 }
-            ]
-        },
-        {
-            words: [
-                { text: "Mobile", value: 5 },
-                { text: "iOS", value: 3 },
-                { text: "React", value: 2 }
-            ]
-        }
-    ]
-};
+document.addEventListener('DOMContentLoaded', function() {
+    d3.csv("normalized_sentiment_data_2020.csv").then(function(csvData) {
+        // Clean up column names and ensure numeric values
+        csvData = csvData.map(d => ({
+            Destination: d.Destination,
+            Category: d.Category,
+            Year: parseInt(d.Year) || 0,
+            Cognitive_Theme: d['Cognitive Theme'],
+            Positive_Sentiment: parseFloat(d['Positive Sentiment']) || 0,
+            Negative_Sentiment: parseFloat(d['Negative Sentiment']) || 0,
+            Positive_Count: parseInt(d['Positive Count']) || 0,
+            Negative_Count: parseInt(d['Negative Count']) || 0,
+            Total_Count: parseInt(d['Total Count']) || 0,
+            Non_Emotional_Count: parseInt(d['Non-Emotional Count']) || 0
+        }));
 
-// Initialize the radar view
-const options = {
-    width: 800,
-    height: 800,
-    outerRadius: 300,
-    innerRadius: 150,
-    sectors: 5
-};
+        console.log('Processed CSV data:', csvData);
 
-const radarView = new RadarView('radar-container', sampleData, options);
+        const visualizationData = processCSVData(csvData);
+        console.log('Visualization data:', visualizationData);
+        
+        const options = {
+            width: 800,
+            height: 800,
+            outerRadius: 300,
+            innerRadius: 150,
+            sectors: 5
+        };
+
+        const radarView = new RadarView('radar-container', visualizationData, options);
+    }).catch(error => {
+        console.error('Error loading or processing CSV:', error);
+    });
+});
