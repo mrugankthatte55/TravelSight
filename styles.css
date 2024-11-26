@@ -1,0 +1,37 @@
+#radar-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.radar-circle {
+    fill: none;
+    stroke: #333;
+    stroke-width: 2;
+}
+
+.radar-line {
+    stroke: #333;
+    stroke-width: 1;
+}
+
+.inner-polygon {
+    fill: rgba(255, 68, 68, 0.3);
+    stroke: #ff4444;
+    stroke-width: 2;
+}
+
+.data-point {
+    fill: #ff4444;
+    stroke: none;
+}
+
+.word-cloud text {
+    font-family: Arial, sans-serif;
+}
+
+.sector-label {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
