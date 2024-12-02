@@ -1,0 +1,1501 @@
+Location,Category,Word,Frequency
+British Museum,foods,café,95
+British Museum,foods,restaurant,87
+British Museum,foods,snacks,78
+British Museum,foods,coffee,73
+British Museum,foods,pastries,32
+British Museum,foods,sandwiches,70
+British Museum,atmospheres,quiet,92
+British Museum,atmospheres,peaceful,105
+British Museum,atmospheres,cultured,97
+British Museum,atmospheres,elegant,61
+British Museum,atmospheres,refined,70
+British Museum,atmospheres,intellectual,53
+British Museum,services,guided tours,145
+British Museum,services,audio guides,86
+British Museum,services,information desk,71
+British Museum,services,gift shop,64
+British Museum,services,coat check,80
+British Museum,services,wheelchair access,64
+British Museum,scenery,galleries,147
+British Museum,scenery,architecture,104
+British Museum,scenery,halls,85
+British Museum,scenery,exhibits,83
+British Museum,scenery,lighting,71
+British Museum,scenery,space,55
+British Museum,attractions,exhibitions,119
+British Museum,attractions,artifacts,124
+British Museum,attractions,masterpieces,111
+British Museum,attractions,collections,90
+British Museum,attractions,galleries,86
+British Museum,attractions,artwork,52
+Getty Center,foods,café,108
+Getty Center,foods,restaurant,92
+Getty Center,foods,snacks,64
+Getty Center,foods,coffee,62
+Getty Center,foods,pastries,48
+Getty Center,foods,sandwiches,68
+Getty Center,atmospheres,quiet,129
+Getty Center,atmospheres,peaceful,116
+Getty Center,atmospheres,cultured,90
+Getty Center,atmospheres,elegant,85
+Getty Center,atmospheres,refined,57
+Getty Center,atmospheres,intellectual,54
+Getty Center,services,guided tours,119
+Getty Center,services,audio guides,95
+Getty Center,services,information desk,91
+Getty Center,services,gift shop,70
+Getty Center,services,coat check,51
+Getty Center,services,wheelchair access,50
+Getty Center,scenery,galleries,103
+Getty Center,scenery,architecture,130
+Getty Center,scenery,halls,119
+Getty Center,scenery,exhibits,97
+Getty Center,scenery,lighting,61
+Getty Center,scenery,space,76
+Getty Center,attractions,exhibitions,128
+Getty Center,attractions,artifacts,95
+Getty Center,attractions,masterpieces,102
+Getty Center,attractions,collections,71
+Getty Center,attractions,galleries,86
+Getty Center,attractions,artwork,70
+Guggenheim,foods,café,82
+Guggenheim,foods,restaurant,84
+Guggenheim,foods,snacks,50
+Guggenheim,foods,coffee,68
+Guggenheim,foods,pastries,44
+Guggenheim,foods,sandwiches,41
+Guggenheim,atmospheres,quiet,125
+Guggenheim,atmospheres,peaceful,96
+Guggenheim,atmospheres,cultured,79
+Guggenheim,atmospheres,elegant,80
+Guggenheim,atmospheres,refined,56
+Guggenheim,atmospheres,intellectual,63
+Guggenheim,services,guided tours,121
+Guggenheim,services,audio guides,116
+Guggenheim,services,information desk,97
+Guggenheim,services,gift shop,86
+Guggenheim,services,coat check,53
+Guggenheim,services,wheelchair access,59
+Guggenheim,scenery,galleries,119
+Guggenheim,scenery,architecture,127
+Guggenheim,scenery,halls,84
+Guggenheim,scenery,exhibits,81
+Guggenheim,scenery,lighting,83
+Guggenheim,scenery,space,67
+Guggenheim,attractions,exhibitions,111
+Guggenheim,attractions,artifacts,111
+Guggenheim,attractions,masterpieces,94
+Guggenheim,attractions,collections,90
+Guggenheim,attractions,galleries,83
+Guggenheim,attractions,artwork,52
+Hermitage,foods,café,82
+Hermitage,foods,restaurant,99
+Hermitage,foods,snacks,72
+Hermitage,foods,coffee,87
+Hermitage,foods,pastries,35
+Hermitage,foods,sandwiches,49
+Hermitage,atmospheres,quiet,126
+Hermitage,atmospheres,peaceful,107
+Hermitage,atmospheres,cultured,88
+Hermitage,atmospheres,elegant,88
+Hermitage,atmospheres,refined,77
+Hermitage,atmospheres,intellectual,43
+Hermitage,services,guided tours,131
+Hermitage,services,audio guides,94
+Hermitage,services,information desk,97
+Hermitage,services,gift shop,63
+Hermitage,services,coat check,68
+Hermitage,services,wheelchair access,54
+Hermitage,scenery,galleries,142
+Hermitage,scenery,architecture,107
+Hermitage,scenery,halls,82
+Hermitage,scenery,exhibits,77
+Hermitage,scenery,lighting,73
+Hermitage,scenery,space,60
+Hermitage,attractions,exhibitions,118
+Hermitage,attractions,artifacts,125
+Hermitage,attractions,masterpieces,98
+Hermitage,attractions,collections,94
+Hermitage,attractions,galleries,62
+Hermitage,attractions,artwork,59
+Louvre,foods,café,109
+Louvre,foods,restaurant,85
+Louvre,foods,snacks,80
+Louvre,foods,coffee,90
+Louvre,foods,pastries,43
+Louvre,foods,sandwiches,57
+Louvre,atmospheres,quiet,98
+Louvre,atmospheres,peaceful,106
+Louvre,atmospheres,cultured,72
+Louvre,atmospheres,elegant,72
+Louvre,atmospheres,refined,76
+Louvre,atmospheres,intellectual,54
+Louvre,services,guided tours,115
+Louvre,services,audio guides,94
+Louvre,services,information desk,95
+Louvre,services,gift shop,72
+Louvre,services,coat check,74
+Louvre,services,wheelchair access,50
+Louvre,scenery,galleries,127
+Louvre,scenery,architecture,101
+Louvre,scenery,halls,93
+Louvre,scenery,exhibits,83
+Louvre,scenery,lighting,62
+Louvre,scenery,space,61
+Louvre,attractions,exhibitions,124
+Louvre,attractions,artifacts,102
+Louvre,attractions,masterpieces,118
+Louvre,attractions,collections,93
+Louvre,attractions,galleries,89
+Louvre,attractions,artwork,59
+Metropolitan Museum,foods,café,90
+Metropolitan Museum,foods,restaurant,100
+Metropolitan Museum,foods,snacks,77
+Metropolitan Museum,foods,coffee,65
+Metropolitan Museum,foods,pastries,38
+Metropolitan Museum,foods,sandwiches,57
+Metropolitan Museum,atmospheres,quiet,107
+Metropolitan Museum,atmospheres,peaceful,97
+Metropolitan Museum,atmospheres,cultured,90
+Metropolitan Museum,atmospheres,elegant,81
+Metropolitan Museum,atmospheres,refined,55
+Metropolitan Museum,atmospheres,intellectual,56
+Metropolitan Museum,services,guided tours,135
+Metropolitan Museum,services,audio guides,90
+Metropolitan Museum,services,information desk,92
+Metropolitan Museum,services,gift shop,78
+Metropolitan Museum,services,coat check,66
+Metropolitan Museum,services,wheelchair access,51
+Metropolitan Museum,scenery,galleries,116
+Metropolitan Museum,scenery,architecture,93
+Metropolitan Museum,scenery,halls,87
+Metropolitan Museum,scenery,exhibits,75
+Metropolitan Museum,scenery,lighting,72
+Metropolitan Museum,scenery,space,59
+Metropolitan Museum,attractions,exhibitions,139
+Metropolitan Museum,attractions,artifacts,90
+Metropolitan Museum,attractions,masterpieces,119
+Metropolitan Museum,attractions,collections,87
+Metropolitan Museum,attractions,galleries,60
+Metropolitan Museum,attractions,artwork,69
+National Gallery,foods,café,119
+National Gallery,foods,restaurant,74
+National Gallery,foods,snacks,52
+National Gallery,foods,coffee,66
+National Gallery,foods,pastries,47
+National Gallery,foods,sandwiches,52
+National Gallery,atmospheres,quiet,98
+National Gallery,atmospheres,peaceful,102
+National Gallery,atmospheres,cultured,77
+National Gallery,atmospheres,elegant,69
+National Gallery,atmospheres,refined,75
+National Gallery,atmospheres,intellectual,65
+National Gallery,services,guided tours,114
+National Gallery,services,audio guides,92
+National Gallery,services,information desk,98
+National Gallery,services,gift shop,89
+National Gallery,services,coat check,77
+National Gallery,services,wheelchair access,67
+National Gallery,scenery,galleries,134
+National Gallery,scenery,architecture,108
+National Gallery,scenery,halls,89
+National Gallery,scenery,exhibits,94
+National Gallery,scenery,lighting,87
+National Gallery,scenery,space,78
+National Gallery,attractions,exhibitions,125
+National Gallery,attractions,artifacts,90
+National Gallery,attractions,masterpieces,100
+National Gallery,attractions,collections,82
+National Gallery,attractions,galleries,68
+National Gallery,attractions,artwork,75
+Rijksmuseum,foods,café,94
+Rijksmuseum,foods,restaurant,71
+Rijksmuseum,foods,snacks,59
+Rijksmuseum,foods,coffee,86
+Rijksmuseum,foods,pastries,40
+Rijksmuseum,foods,sandwiches,46
+Rijksmuseum,atmospheres,quiet,117
+Rijksmuseum,atmospheres,peaceful,95
+Rijksmuseum,atmospheres,cultured,83
+Rijksmuseum,atmospheres,elegant,76
+Rijksmuseum,atmospheres,refined,70
+Rijksmuseum,atmospheres,intellectual,68
+Rijksmuseum,services,guided tours,137
+Rijksmuseum,services,audio guides,102
+Rijksmuseum,services,information desk,98
+Rijksmuseum,services,gift shop,74
+Rijksmuseum,services,coat check,76
+Rijksmuseum,services,wheelchair access,61
+Rijksmuseum,scenery,galleries,116
+Rijksmuseum,scenery,architecture,123
+Rijksmuseum,scenery,halls,110
+Rijksmuseum,scenery,exhibits,87
+Rijksmuseum,scenery,lighting,75
+Rijksmuseum,scenery,space,66
+Rijksmuseum,attractions,exhibitions,122
+Rijksmuseum,attractions,artifacts,123
+Rijksmuseum,attractions,masterpieces,115
+Rijksmuseum,attractions,collections,88
+Rijksmuseum,attractions,galleries,76
+Rijksmuseum,attractions,artwork,64
+Smithsonian,foods,café,114
+Smithsonian,foods,restaurant,77
+Smithsonian,foods,snacks,60
+Smithsonian,foods,coffee,89
+Smithsonian,foods,pastries,39
+Smithsonian,foods,sandwiches,47
+Smithsonian,atmospheres,quiet,90
+Smithsonian,atmospheres,peaceful,98
+Smithsonian,atmospheres,cultured,77
+Smithsonian,atmospheres,elegant,62
+Smithsonian,atmospheres,refined,71
+Smithsonian,atmospheres,intellectual,59
+Smithsonian,services,guided tours,146
+Smithsonian,services,audio guides,88
+Smithsonian,services,information desk,94
+Smithsonian,services,gift shop,62
+Smithsonian,services,coat check,55
+Smithsonian,services,wheelchair access,49
+Smithsonian,scenery,galleries,124
+Smithsonian,scenery,architecture,116
+Smithsonian,scenery,halls,120
+Smithsonian,scenery,exhibits,78
+Smithsonian,scenery,lighting,90
+Smithsonian,scenery,space,78
+Smithsonian,attractions,exhibitions,130
+Smithsonian,attractions,artifacts,123
+Smithsonian,attractions,masterpieces,102
+Smithsonian,attractions,collections,71
+Smithsonian,attractions,galleries,68
+Smithsonian,attractions,artwork,68
+Uffizi Gallery,foods,café,89
+Uffizi Gallery,foods,restaurant,98
+Uffizi Gallery,foods,snacks,68
+Uffizi Gallery,foods,coffee,80
+Uffizi Gallery,foods,pastries,34
+Uffizi Gallery,foods,sandwiches,63
+Uffizi Gallery,atmospheres,quiet,97
+Uffizi Gallery,atmospheres,peaceful,117
+Uffizi Gallery,atmospheres,cultured,89
+Uffizi Gallery,atmospheres,elegant,80
+Uffizi Gallery,atmospheres,refined,61
+Uffizi Gallery,atmospheres,intellectual,42
+Uffizi Gallery,services,guided tours,100
+Uffizi Gallery,services,audio guides,90
+Uffizi Gallery,services,information desk,98
+Uffizi Gallery,services,gift shop,61
+Uffizi Gallery,services,coat check,50
+Uffizi Gallery,services,wheelchair access,64
+Uffizi Gallery,scenery,galleries,147
+Uffizi Gallery,scenery,architecture,126
+Uffizi Gallery,scenery,halls,86
+Uffizi Gallery,scenery,exhibits,78
+Uffizi Gallery,scenery,lighting,82
+Uffizi Gallery,scenery,space,75
+Uffizi Gallery,attractions,exhibitions,113
+Uffizi Gallery,attractions,artifacts,113
+Uffizi Gallery,attractions,masterpieces,87
+Uffizi Gallery,attractions,collections,89
+Uffizi Gallery,attractions,galleries,88
+Uffizi Gallery,attractions,artwork,77
+Angkor Wat,foods,offerings,84
+Angkor Wat,foods,vegetarian,54
+Angkor Wat,foods,traditional,71
+Angkor Wat,foods,kosher,44
+Angkor Wat,foods,halal,45
+Angkor Wat,foods,sacred,43
+Angkor Wat,atmospheres,spiritual,145
+Angkor Wat,atmospheres,serene,105
+Angkor Wat,atmospheres,reverent,96
+Angkor Wat,atmospheres,sacred,89
+Angkor Wat,atmospheres,peaceful,75
+Angkor Wat,atmospheres,mystical,80
+Angkor Wat,services,guided tours,104
+Angkor Wat,services,prayer rooms,91
+Angkor Wat,services,visitor center,86
+Angkor Wat,services,dress code,63
+Angkor Wat,services,information,70
+Angkor Wat,services,facilities,49
+Angkor Wat,scenery,architecture,115
+Angkor Wat,scenery,gardens,103
+Angkor Wat,scenery,domes,110
+Angkor Wat,scenery,towers,77
+Angkor Wat,scenery,sculptures,82
+Angkor Wat,scenery,decorations,73
+Angkor Wat,attractions,ceremonies,117
+Angkor Wat,attractions,rituals,124
+Angkor Wat,attractions,architecture,96
+Angkor Wat,attractions,history,98
+Angkor Wat,attractions,art,71
+Angkor Wat,attractions,worship,52
+Golden Temple,foods,offerings,78
+Golden Temple,foods,vegetarian,61
+Golden Temple,foods,traditional,72
+Golden Temple,foods,kosher,70
+Golden Temple,foods,halal,47
+Golden Temple,foods,sacred,32
+Golden Temple,atmospheres,spiritual,106
+Golden Temple,atmospheres,serene,116
+Golden Temple,atmospheres,reverent,108
+Golden Temple,atmospheres,sacred,79
+Golden Temple,atmospheres,peaceful,70
+Golden Temple,atmospheres,mystical,52
+Golden Temple,services,guided tours,91
+Golden Temple,services,prayer rooms,110
+Golden Temple,services,visitor center,74
+Golden Temple,services,dress code,84
+Golden Temple,services,information,66
+Golden Temple,services,facilities,40
+Golden Temple,scenery,architecture,128
+Golden Temple,scenery,gardens,99
+Golden Temple,scenery,domes,88
+Golden Temple,scenery,towers,81
+Golden Temple,scenery,sculptures,61
+Golden Temple,scenery,decorations,64
+Golden Temple,attractions,ceremonies,112
+Golden Temple,attractions,rituals,119
+Golden Temple,attractions,architecture,86
+Golden Temple,attractions,history,99
+Golden Temple,attractions,art,78
+Golden Temple,attractions,worship,62
+Mecca,foods,offerings,91
+Mecca,foods,vegetarian,68
+Mecca,foods,traditional,61
+Mecca,foods,kosher,63
+Mecca,foods,halal,55
+Mecca,foods,sacred,59
+Mecca,atmospheres,spiritual,101
+Mecca,atmospheres,serene,100
+Mecca,atmospheres,reverent,83
+Mecca,atmospheres,sacred,81
+Mecca,atmospheres,peaceful,64
+Mecca,atmospheres,mystical,75
+Mecca,services,guided tours,118
+Mecca,services,prayer rooms,81
+Mecca,services,visitor center,99
+Mecca,services,dress code,67
+Mecca,services,information,77
+Mecca,services,facilities,52
+Mecca,scenery,architecture,142
+Mecca,scenery,gardens,126
+Mecca,scenery,domes,108
+Mecca,scenery,towers,92
+Mecca,scenery,sculptures,87
+Mecca,scenery,decorations,54
+Mecca,attractions,ceremonies,135
+Mecca,attractions,rituals,115
+Mecca,attractions,architecture,107
+Mecca,attractions,history,89
+Mecca,attractions,art,77
+Mecca,attractions,worship,76
+Notre Dame,foods,offerings,94
+Notre Dame,foods,vegetarian,59
+Notre Dame,foods,traditional,89
+Notre Dame,foods,kosher,52
+Notre Dame,foods,halal,50
+Notre Dame,foods,sacred,57
+Notre Dame,atmospheres,spiritual,131
+Notre Dame,atmospheres,serene,111
+Notre Dame,atmospheres,reverent,114
+Notre Dame,atmospheres,sacred,100
+Notre Dame,atmospheres,peaceful,72
+Notre Dame,atmospheres,mystical,63
+Notre Dame,services,guided tours,130
+Notre Dame,services,prayer rooms,101
+Notre Dame,services,visitor center,95
+Notre Dame,services,dress code,85
+Notre Dame,services,information,64
+Notre Dame,services,facilities,43
+Notre Dame,scenery,architecture,141
+Notre Dame,scenery,gardens,95
+Notre Dame,scenery,domes,84
+Notre Dame,scenery,towers,89
+Notre Dame,scenery,sculptures,75
+Notre Dame,scenery,decorations,56
+Notre Dame,attractions,ceremonies,109
+Notre Dame,attractions,rituals,111
+Notre Dame,attractions,architecture,113
+Notre Dame,attractions,history,89
+Notre Dame,attractions,art,76
+Notre Dame,attractions,worship,71
+Sagrada Familia,foods,offerings,99
+Sagrada Familia,foods,vegetarian,71
+Sagrada Familia,foods,traditional,84
+Sagrada Familia,foods,kosher,40
+Sagrada Familia,foods,halal,45
+Sagrada Familia,foods,sacred,52
+Sagrada Familia,atmospheres,spiritual,135
+Sagrada Familia,atmospheres,serene,112
+Sagrada Familia,atmospheres,reverent,83
+Sagrada Familia,atmospheres,sacred,93
+Sagrada Familia,atmospheres,peaceful,77
+Sagrada Familia,atmospheres,mystical,53
+Sagrada Familia,services,guided tours,94
+Sagrada Familia,services,prayer rooms,114
+Sagrada Familia,services,visitor center,85
+Sagrada Familia,services,dress code,73
+Sagrada Familia,services,information,62
+Sagrada Familia,services,facilities,62
+Sagrada Familia,scenery,architecture,134
+Sagrada Familia,scenery,gardens,98
+Sagrada Familia,scenery,domes,103
+Sagrada Familia,scenery,towers,90
+Sagrada Familia,scenery,sculptures,86
+Sagrada Familia,scenery,decorations,66
+Sagrada Familia,attractions,ceremonies,136
+Sagrada Familia,attractions,rituals,117
+Sagrada Familia,attractions,architecture,85
+Sagrada Familia,attractions,history,76
+Sagrada Familia,attractions,art,89
+Sagrada Familia,attractions,worship,80
+Salt Lake Temple,foods,offerings,94
+Salt Lake Temple,foods,vegetarian,64
+Salt Lake Temple,foods,traditional,64
+Salt Lake Temple,foods,kosher,56
+Salt Lake Temple,foods,halal,72
+Salt Lake Temple,foods,sacred,55
+Salt Lake Temple,atmospheres,spiritual,103
+Salt Lake Temple,atmospheres,serene,123
+Salt Lake Temple,atmospheres,reverent,113
+Salt Lake Temple,atmospheres,sacred,82
+Salt Lake Temple,atmospheres,peaceful,84
+Salt Lake Temple,atmospheres,mystical,52
+Salt Lake Temple,services,guided tours,103
+Salt Lake Temple,services,prayer rooms,89
+Salt Lake Temple,services,visitor center,71
+Salt Lake Temple,services,dress code,61
+Salt Lake Temple,services,information,70
+Salt Lake Temple,services,facilities,40
+Salt Lake Temple,scenery,architecture,117
+Salt Lake Temple,scenery,gardens,91
+Salt Lake Temple,scenery,domes,88
+Salt Lake Temple,scenery,towers,82
+Salt Lake Temple,scenery,sculptures,60
+Salt Lake Temple,scenery,decorations,58
+Salt Lake Temple,attractions,ceremonies,135
+Salt Lake Temple,attractions,rituals,127
+Salt Lake Temple,attractions,architecture,84
+Salt Lake Temple,attractions,history,93
+Salt Lake Temple,attractions,art,87
+Salt Lake Temple,attractions,worship,79
+Shwedagon Pagoda,foods,offerings,72
+Shwedagon Pagoda,foods,vegetarian,64
+Shwedagon Pagoda,foods,traditional,87
+Shwedagon Pagoda,foods,kosher,41
+Shwedagon Pagoda,foods,halal,67
+Shwedagon Pagoda,foods,sacred,58
+Shwedagon Pagoda,atmospheres,spiritual,126
+Shwedagon Pagoda,atmospheres,serene,130
+Shwedagon Pagoda,atmospheres,reverent,110
+Shwedagon Pagoda,atmospheres,sacred,74
+Shwedagon Pagoda,atmospheres,peaceful,73
+Shwedagon Pagoda,atmospheres,mystical,72
+Shwedagon Pagoda,services,guided tours,98
+Shwedagon Pagoda,services,prayer rooms,95
+Shwedagon Pagoda,services,visitor center,85
+Shwedagon Pagoda,services,dress code,77
+Shwedagon Pagoda,services,information,62
+Shwedagon Pagoda,services,facilities,69
+Shwedagon Pagoda,scenery,architecture,110
+Shwedagon Pagoda,scenery,gardens,97
+Shwedagon Pagoda,scenery,domes,85
+Shwedagon Pagoda,scenery,towers,70
+Shwedagon Pagoda,scenery,sculptures,71
+Shwedagon Pagoda,scenery,decorations,62
+Shwedagon Pagoda,attractions,ceremonies,142
+Shwedagon Pagoda,attractions,rituals,90
+Shwedagon Pagoda,attractions,architecture,80
+Shwedagon Pagoda,attractions,history,72
+Shwedagon Pagoda,attractions,art,61
+Shwedagon Pagoda,attractions,worship,58
+St. Peter's Basilica,foods,offerings,94
+St. Peter's Basilica,foods,vegetarian,51
+St. Peter's Basilica,foods,traditional,82
+St. Peter's Basilica,foods,kosher,42
+St. Peter's Basilica,foods,halal,75
+St. Peter's Basilica,foods,sacred,54
+St. Peter's Basilica,atmospheres,spiritual,116
+St. Peter's Basilica,atmospheres,serene,105
+St. Peter's Basilica,atmospheres,reverent,80
+St. Peter's Basilica,atmospheres,sacred,76
+St. Peter's Basilica,atmospheres,peaceful,71
+St. Peter's Basilica,atmospheres,mystical,53
+St. Peter's Basilica,services,guided tours,99
+St. Peter's Basilica,services,prayer rooms,107
+St. Peter's Basilica,services,visitor center,98
+St. Peter's Basilica,services,dress code,62
+St. Peter's Basilica,services,information,76
+St. Peter's Basilica,services,facilities,40
+St. Peter's Basilica,scenery,architecture,131
+St. Peter's Basilica,scenery,gardens,103
+St. Peter's Basilica,scenery,domes,85
+St. Peter's Basilica,scenery,towers,82
+St. Peter's Basilica,scenery,sculptures,79
+St. Peter's Basilica,scenery,decorations,63
+St. Peter's Basilica,attractions,ceremonies,130
+St. Peter's Basilica,attractions,rituals,118
+St. Peter's Basilica,attractions,architecture,93
+St. Peter's Basilica,attractions,history,100
+St. Peter's Basilica,attractions,art,74
+St. Peter's Basilica,attractions,worship,64
+Vatican City,foods,offerings,89
+Vatican City,foods,vegetarian,51
+Vatican City,foods,traditional,65
+Vatican City,foods,kosher,40
+Vatican City,foods,halal,51
+Vatican City,foods,sacred,51
+Vatican City,atmospheres,spiritual,144
+Vatican City,atmospheres,serene,98
+Vatican City,atmospheres,reverent,85
+Vatican City,atmospheres,sacred,99
+Vatican City,atmospheres,peaceful,84
+Vatican City,atmospheres,mystical,56
+Vatican City,services,guided tours,102
+Vatican City,services,prayer rooms,81
+Vatican City,services,visitor center,87
+Vatican City,services,dress code,86
+Vatican City,services,information,62
+Vatican City,services,facilities,68
+Vatican City,scenery,architecture,126
+Vatican City,scenery,gardens,125
+Vatican City,scenery,domes,96
+Vatican City,scenery,towers,83
+Vatican City,scenery,sculptures,73
+Vatican City,scenery,decorations,60
+Vatican City,attractions,ceremonies,139
+Vatican City,attractions,rituals,110
+Vatican City,attractions,architecture,88
+Vatican City,attractions,history,94
+Vatican City,attractions,art,81
+Vatican City,attractions,worship,54
+Western Wall,foods,offerings,89
+Western Wall,foods,vegetarian,74
+Western Wall,foods,traditional,75
+Western Wall,foods,kosher,48
+Western Wall,foods,halal,51
+Western Wall,foods,sacred,36
+Western Wall,atmospheres,spiritual,113
+Western Wall,atmospheres,serene,96
+Western Wall,atmospheres,reverent,85
+Western Wall,atmospheres,sacred,96
+Western Wall,atmospheres,peaceful,87
+Western Wall,atmospheres,mystical,63
+Western Wall,services,guided tours,103
+Western Wall,services,prayer rooms,83
+Western Wall,services,visitor center,70
+Western Wall,services,dress code,86
+Western Wall,services,information,78
+Western Wall,services,facilities,54
+Western Wall,scenery,architecture,104
+Western Wall,scenery,gardens,112
+Western Wall,scenery,domes,107
+Western Wall,scenery,towers,85
+Western Wall,scenery,sculptures,62
+Western Wall,scenery,decorations,62
+Western Wall,attractions,ceremonies,125
+Western Wall,attractions,rituals,128
+Western Wall,attractions,architecture,95
+Western Wall,attractions,history,91
+Western Wall,attractions,art,72
+Western Wall,attractions,worship,56
+Balboa Park,foods,picnic,113
+Balboa Park,foods,food trucks,75
+Balboa Park,foods,ice cream,99
+Balboa Park,foods,hot dogs,70
+Balboa Park,foods,vendors,70
+Balboa Park,foods,refreshments,39
+Balboa Park,atmospheres,relaxed,120
+Balboa Park,atmospheres,lively,96
+Balboa Park,atmospheres,family-friendly,91
+Balboa Park,atmospheres,outdoor,68
+Balboa Park,atmospheres,natural,53
+Balboa Park,atmospheres,recreational,44
+Balboa Park,services,restrooms,99
+Balboa Park,services,visitor center,95
+Balboa Park,services,rentals,87
+Balboa Park,services,parking,70
+Balboa Park,services,security,74
+Balboa Park,services,maintenance,53
+Balboa Park,scenery,trees,101
+Balboa Park,scenery,gardens,113
+Balboa Park,scenery,lakes,84
+Balboa Park,scenery,paths,70
+Balboa Park,scenery,landscapes,66
+Balboa Park,scenery,fountains,70
+Balboa Park,attractions,playgrounds,131
+Balboa Park,attractions,sports,109
+Balboa Park,attractions,events,109
+Balboa Park,attractions,activities,78
+Balboa Park,attractions,attractions,63
+Balboa Park,attractions,recreation,59
+Central Park,foods,picnic,118
+Central Park,foods,food trucks,81
+Central Park,foods,ice cream,81
+Central Park,foods,hot dogs,65
+Central Park,foods,vendors,55
+Central Park,foods,refreshments,59
+Central Park,atmospheres,relaxed,97
+Central Park,atmospheres,lively,112
+Central Park,atmospheres,family-friendly,72
+Central Park,atmospheres,outdoor,72
+Central Park,atmospheres,natural,70
+Central Park,atmospheres,recreational,42
+Central Park,services,restrooms,90
+Central Park,services,visitor center,115
+Central Park,services,rentals,87
+Central Park,services,parking,61
+Central Park,services,security,58
+Central Park,services,maintenance,70
+Central Park,scenery,trees,104
+Central Park,scenery,gardens,96
+Central Park,scenery,lakes,91
+Central Park,scenery,paths,78
+Central Park,scenery,landscapes,68
+Central Park,scenery,fountains,63
+Central Park,attractions,playgrounds,130
+Central Park,attractions,sports,114
+Central Park,attractions,events,105
+Central Park,attractions,activities,97
+Central Park,attractions,attractions,88
+Central Park,attractions,recreation,58
+Chapultepec Park,foods,picnic,98
+Chapultepec Park,foods,food trucks,83
+Chapultepec Park,foods,ice cream,71
+Chapultepec Park,foods,hot dogs,61
+Chapultepec Park,foods,vendors,48
+Chapultepec Park,foods,refreshments,54
+Chapultepec Park,atmospheres,relaxed,90
+Chapultepec Park,atmospheres,lively,86
+Chapultepec Park,atmospheres,family-friendly,97
+Chapultepec Park,atmospheres,outdoor,69
+Chapultepec Park,atmospheres,natural,54
+Chapultepec Park,atmospheres,recreational,40
+Chapultepec Park,services,restrooms,100
+Chapultepec Park,services,visitor center,99
+Chapultepec Park,services,rentals,82
+Chapultepec Park,services,parking,63
+Chapultepec Park,services,security,67
+Chapultepec Park,services,maintenance,67
+Chapultepec Park,scenery,trees,150
+Chapultepec Park,scenery,gardens,90
+Chapultepec Park,scenery,lakes,106
+Chapultepec Park,scenery,paths,99
+Chapultepec Park,scenery,landscapes,89
+Chapultepec Park,scenery,fountains,67
+Chapultepec Park,attractions,playgrounds,133
+Chapultepec Park,attractions,sports,113
+Chapultepec Park,attractions,events,120
+Chapultepec Park,attractions,activities,88
+Chapultepec Park,attractions,attractions,68
+Chapultepec Park,attractions,recreation,66
+Golden Gate Park,foods,picnic,94
+Golden Gate Park,foods,food trucks,78
+Golden Gate Park,foods,ice cream,98
+Golden Gate Park,foods,hot dogs,78
+Golden Gate Park,foods,vendors,46
+Golden Gate Park,foods,refreshments,40
+Golden Gate Park,atmospheres,relaxed,90
+Golden Gate Park,atmospheres,lively,89
+Golden Gate Park,atmospheres,family-friendly,70
+Golden Gate Park,atmospheres,outdoor,74
+Golden Gate Park,atmospheres,natural,63
+Golden Gate Park,atmospheres,recreational,58
+Golden Gate Park,services,restrooms,92
+Golden Gate Park,services,visitor center,86
+Golden Gate Park,services,rentals,77
+Golden Gate Park,services,parking,71
+Golden Gate Park,services,security,74
+Golden Gate Park,services,maintenance,41
+Golden Gate Park,scenery,trees,118
+Golden Gate Park,scenery,gardens,98
+Golden Gate Park,scenery,lakes,118
+Golden Gate Park,scenery,paths,87
+Golden Gate Park,scenery,landscapes,83
+Golden Gate Park,scenery,fountains,54
+Golden Gate Park,attractions,playgrounds,106
+Golden Gate Park,attractions,sports,91
+Golden Gate Park,attractions,events,113
+Golden Gate Park,attractions,activities,81
+Golden Gate Park,attractions,attractions,85
+Golden Gate Park,attractions,recreation,54
+Griffith Park,foods,picnic,103
+Griffith Park,foods,food trucks,60
+Griffith Park,foods,ice cream,91
+Griffith Park,foods,hot dogs,51
+Griffith Park,foods,vendors,44
+Griffith Park,foods,refreshments,54
+Griffith Park,atmospheres,relaxed,117
+Griffith Park,atmospheres,lively,81
+Griffith Park,atmospheres,family-friendly,78
+Griffith Park,atmospheres,outdoor,85
+Griffith Park,atmospheres,natural,50
+Griffith Park,atmospheres,recreational,68
+Griffith Park,services,restrooms,126
+Griffith Park,services,visitor center,81
+Griffith Park,services,rentals,90
+Griffith Park,services,parking,74
+Griffith Park,services,security,64
+Griffith Park,services,maintenance,58
+Griffith Park,scenery,trees,102
+Griffith Park,scenery,gardens,92
+Griffith Park,scenery,lakes,109
+Griffith Park,scenery,paths,94
+Griffith Park,scenery,landscapes,61
+Griffith Park,scenery,fountains,63
+Griffith Park,attractions,playgrounds,117
+Griffith Park,attractions,sports,121
+Griffith Park,attractions,events,98
+Griffith Park,attractions,activities,84
+Griffith Park,attractions,attractions,68
+Griffith Park,attractions,recreation,77
+Hyde Park,foods,picnic,124
+Hyde Park,foods,food trucks,73
+Hyde Park,foods,ice cream,94
+Hyde Park,foods,hot dogs,76
+Hyde Park,foods,vendors,52
+Hyde Park,foods,refreshments,46
+Hyde Park,atmospheres,relaxed,111
+Hyde Park,atmospheres,lively,85
+Hyde Park,atmospheres,family-friendly,86
+Hyde Park,atmospheres,outdoor,78
+Hyde Park,atmospheres,natural,76
+Hyde Park,atmospheres,recreational,53
+Hyde Park,services,restrooms,128
+Hyde Park,services,visitor center,85
+Hyde Park,services,rentals,77
+Hyde Park,services,parking,90
+Hyde Park,services,security,72
+Hyde Park,services,maintenance,62
+Hyde Park,scenery,trees,108
+Hyde Park,scenery,gardens,109
+Hyde Park,scenery,lakes,108
+Hyde Park,scenery,paths,95
+Hyde Park,scenery,landscapes,76
+Hyde Park,scenery,fountains,78
+Hyde Park,attractions,playgrounds,132
+Hyde Park,attractions,sports,124
+Hyde Park,attractions,events,92
+Hyde Park,attractions,activities,91
+Hyde Park,attractions,attractions,80
+Hyde Park,attractions,recreation,55
+Mount Royal Park,foods,picnic,120
+Mount Royal Park,foods,food trucks,85
+Mount Royal Park,foods,ice cream,91
+Mount Royal Park,foods,hot dogs,63
+Mount Royal Park,foods,vendors,57
+Mount Royal Park,foods,refreshments,41
+Mount Royal Park,atmospheres,relaxed,102
+Mount Royal Park,atmospheres,lively,91
+Mount Royal Park,atmospheres,family-friendly,85
+Mount Royal Park,atmospheres,outdoor,70
+Mount Royal Park,atmospheres,natural,56
+Mount Royal Park,atmospheres,recreational,70
+Mount Royal Park,services,restrooms,105
+Mount Royal Park,services,visitor center,83
+Mount Royal Park,services,rentals,72
+Mount Royal Park,services,parking,67
+Mount Royal Park,services,security,77
+Mount Royal Park,services,maintenance,60
+Mount Royal Park,scenery,trees,116
+Mount Royal Park,scenery,gardens,118
+Mount Royal Park,scenery,lakes,120
+Mount Royal Park,scenery,paths,81
+Mount Royal Park,scenery,landscapes,61
+Mount Royal Park,scenery,fountains,78
+Mount Royal Park,attractions,playgrounds,132
+Mount Royal Park,attractions,sports,92
+Mount Royal Park,attractions,events,83
+Mount Royal Park,attractions,activities,95
+Mount Royal Park,attractions,attractions,63
+Mount Royal Park,attractions,recreation,69
+Prospect Park,foods,picnic,114
+Prospect Park,foods,food trucks,65
+Prospect Park,foods,ice cream,71
+Prospect Park,foods,hot dogs,61
+Prospect Park,foods,vendors,63
+Prospect Park,foods,refreshments,38
+Prospect Park,atmospheres,relaxed,119
+Prospect Park,atmospheres,lively,99
+Prospect Park,atmospheres,family-friendly,95
+Prospect Park,atmospheres,outdoor,66
+Prospect Park,atmospheres,natural,53
+Prospect Park,atmospheres,recreational,45
+Prospect Park,services,restrooms,99
+Prospect Park,services,visitor center,120
+Prospect Park,services,rentals,78
+Prospect Park,services,parking,88
+Prospect Park,services,security,79
+Prospect Park,services,maintenance,64
+Prospect Park,scenery,trees,126
+Prospect Park,scenery,gardens,95
+Prospect Park,scenery,lakes,104
+Prospect Park,scenery,paths,71
+Prospect Park,scenery,landscapes,75
+Prospect Park,scenery,fountains,56
+Prospect Park,attractions,playgrounds,140
+Prospect Park,attractions,sports,125
+Prospect Park,attractions,events,84
+Prospect Park,attractions,activities,98
+Prospect Park,attractions,attractions,77
+Prospect Park,attractions,recreation,69
+Ueno Park,foods,picnic,119
+Ueno Park,foods,food trucks,70
+Ueno Park,foods,ice cream,97
+Ueno Park,foods,hot dogs,62
+Ueno Park,foods,vendors,53
+Ueno Park,foods,refreshments,51
+Ueno Park,atmospheres,relaxed,99
+Ueno Park,atmospheres,lively,91
+Ueno Park,atmospheres,family-friendly,91
+Ueno Park,atmospheres,outdoor,68
+Ueno Park,atmospheres,natural,51
+Ueno Park,atmospheres,recreational,56
+Ueno Park,services,restrooms,98
+Ueno Park,services,visitor center,83
+Ueno Park,services,rentals,79
+Ueno Park,services,parking,68
+Ueno Park,services,security,57
+Ueno Park,services,maintenance,65
+Ueno Park,scenery,trees,114
+Ueno Park,scenery,gardens,90
+Ueno Park,scenery,lakes,93
+Ueno Park,scenery,paths,92
+Ueno Park,scenery,landscapes,70
+Ueno Park,scenery,fountains,78
+Ueno Park,attractions,playgrounds,145
+Ueno Park,attractions,sports,96
+Ueno Park,attractions,events,92
+Ueno Park,attractions,activities,86
+Ueno Park,attractions,attractions,78
+Ueno Park,attractions,recreation,73
+Yoyogi Park,foods,picnic,127
+Yoyogi Park,foods,food trucks,71
+Yoyogi Park,foods,ice cream,90
+Yoyogi Park,foods,hot dogs,69
+Yoyogi Park,foods,vendors,55
+Yoyogi Park,foods,refreshments,32
+Yoyogi Park,atmospheres,relaxed,129
+Yoyogi Park,atmospheres,lively,119
+Yoyogi Park,atmospheres,family-friendly,97
+Yoyogi Park,atmospheres,outdoor,84
+Yoyogi Park,atmospheres,natural,64
+Yoyogi Park,atmospheres,recreational,42
+Yoyogi Park,services,restrooms,118
+Yoyogi Park,services,visitor center,116
+Yoyogi Park,services,rentals,81
+Yoyogi Park,services,parking,79
+Yoyogi Park,services,security,57
+Yoyogi Park,services,maintenance,47
+Yoyogi Park,scenery,trees,144
+Yoyogi Park,scenery,gardens,112
+Yoyogi Park,scenery,lakes,105
+Yoyogi Park,scenery,paths,86
+Yoyogi Park,scenery,landscapes,69
+Yoyogi Park,scenery,fountains,63
+Yoyogi Park,attractions,playgrounds,135
+Yoyogi Park,attractions,sports,117
+Yoyogi Park,attractions,events,111
+Yoyogi Park,attractions,activities,100
+Yoyogi Park,attractions,attractions,82
+Yoyogi Park,attractions,recreation,63
+Bhaktapur,foods,local cuisine,92
+Bhaktapur,foods,street food,71
+Bhaktapur,foods,authentic,74
+Bhaktapur,foods,traditional,57
+Bhaktapur,foods,spices,68
+Bhaktapur,foods,fresh,41
+Bhaktapur,atmospheres,ancient,130
+Bhaktapur,atmospheres,mysterious,98
+Bhaktapur,atmospheres,authentic,70
+Bhaktapur,atmospheres,timeless,64
+Bhaktapur,atmospheres,cultural,67
+Bhaktapur,atmospheres,historic,45
+Bhaktapur,services,guided tours,128
+Bhaktapur,services,information center,108
+Bhaktapur,services,maps,76
+Bhaktapur,services,restrooms,65
+Bhaktapur,services,security,75
+Bhaktapur,services,transportation,44
+Bhaktapur,scenery,ruins,135
+Bhaktapur,scenery,architecture,105
+Bhaktapur,scenery,stones,90
+Bhaktapur,scenery,artifacts,93
+Bhaktapur,scenery,monuments,67
+Bhaktapur,scenery,structures,70
+Bhaktapur,attractions,archaeology,133
+Bhaktapur,attractions,history,112
+Bhaktapur,attractions,culture,85
+Bhaktapur,attractions,architecture,90
+Bhaktapur,attractions,artifacts,86
+Bhaktapur,attractions,ruins,55
+Giza,foods,local cuisine,83
+Giza,foods,street food,86
+Giza,foods,authentic,65
+Giza,foods,traditional,67
+Giza,foods,spices,63
+Giza,foods,fresh,50
+Giza,atmospheres,ancient,105
+Giza,atmospheres,mysterious,88
+Giza,atmospheres,authentic,70
+Giza,atmospheres,timeless,77
+Giza,atmospheres,cultural,73
+Giza,atmospheres,historic,58
+Giza,services,guided tours,138
+Giza,services,information center,96
+Giza,services,maps,83
+Giza,services,restrooms,67
+Giza,services,security,52
+Giza,services,transportation,56
+Giza,scenery,ruins,108
+Giza,scenery,architecture,130
+Giza,scenery,stones,81
+Giza,scenery,artifacts,90
+Giza,scenery,monuments,90
+Giza,scenery,structures,64
+Giza,attractions,archaeology,147
+Giza,attractions,history,124
+Giza,attractions,culture,101
+Giza,attractions,architecture,78
+Giza,attractions,artifacts,67
+Giza,attractions,ruins,61
+Hoi An,foods,local cuisine,108
+Hoi An,foods,street food,76
+Hoi An,foods,authentic,83
+Hoi An,foods,traditional,66
+Hoi An,foods,spices,56
+Hoi An,foods,fresh,59
+Hoi An,atmospheres,ancient,114
+Hoi An,atmospheres,mysterious,81
+Hoi An,atmospheres,authentic,75
+Hoi An,atmospheres,timeless,79
+Hoi An,atmospheres,cultural,77
+Hoi An,atmospheres,historic,57
+Hoi An,services,guided tours,124
+Hoi An,services,information center,91
+Hoi An,services,maps,95
+Hoi An,services,restrooms,74
+Hoi An,services,security,67
+Hoi An,services,transportation,41
+Hoi An,scenery,ruins,138
+Hoi An,scenery,architecture,114
+Hoi An,scenery,stones,113
+Hoi An,scenery,artifacts,75
+Hoi An,scenery,monuments,70
+Hoi An,scenery,structures,65
+Hoi An,attractions,archaeology,122
+Hoi An,attractions,history,105
+Hoi An,attractions,culture,106
+Hoi An,attractions,architecture,73
+Hoi An,attractions,artifacts,64
+Hoi An,attractions,ruins,74
+Kyoto,foods,local cuisine,113
+Kyoto,foods,street food,97
+Kyoto,foods,authentic,62
+Kyoto,foods,traditional,65
+Kyoto,foods,spices,70
+Kyoto,foods,fresh,58
+Kyoto,atmospheres,ancient,143
+Kyoto,atmospheres,mysterious,112
+Kyoto,atmospheres,authentic,79
+Kyoto,atmospheres,timeless,85
+Kyoto,atmospheres,cultural,74
+Kyoto,atmospheres,historic,47
+Kyoto,services,guided tours,115
+Kyoto,services,information center,116
+Kyoto,services,maps,79
+Kyoto,services,restrooms,62
+Kyoto,services,security,79
+Kyoto,services,transportation,52
+Kyoto,scenery,ruins,114
+Kyoto,scenery,architecture,125
+Kyoto,scenery,stones,108
+Kyoto,scenery,artifacts,81
+Kyoto,scenery,monuments,64
+Kyoto,scenery,structures,63
+Kyoto,attractions,archaeology,115
+Kyoto,attractions,history,96
+Kyoto,attractions,culture,113
+Kyoto,attractions,architecture,95
+Kyoto,attractions,artifacts,62
+Kyoto,attractions,ruins,61
+Luang Prabang,foods,local cuisine,96
+Luang Prabang,foods,street food,72
+Luang Prabang,foods,authentic,65
+Luang Prabang,foods,traditional,60
+Luang Prabang,foods,spices,63
+Luang Prabang,foods,fresh,32
+Luang Prabang,atmospheres,ancient,115
+Luang Prabang,atmospheres,mysterious,83
+Luang Prabang,atmospheres,authentic,81
+Luang Prabang,atmospheres,timeless,66
+Luang Prabang,atmospheres,cultural,77
+Luang Prabang,atmospheres,historic,65
+Luang Prabang,services,guided tours,142
+Luang Prabang,services,information center,115
+Luang Prabang,services,maps,79
+Luang Prabang,services,restrooms,76
+Luang Prabang,services,security,71
+Luang Prabang,services,transportation,63
+Luang Prabang,scenery,ruins,119
+Luang Prabang,scenery,architecture,117
+Luang Prabang,scenery,stones,116
+Luang Prabang,scenery,artifacts,70
+Luang Prabang,scenery,monuments,83
+Luang Prabang,scenery,structures,80
+Luang Prabang,attractions,archaeology,105
+Luang Prabang,attractions,history,126
+Luang Prabang,attractions,culture,88
+Luang Prabang,attractions,architecture,90
+Luang Prabang,attractions,artifacts,90
+Luang Prabang,attractions,ruins,59
+Machu Picchu,foods,local cuisine,119
+Machu Picchu,foods,street food,76
+Machu Picchu,foods,authentic,85
+Machu Picchu,foods,traditional,68
+Machu Picchu,foods,spices,53
+Machu Picchu,foods,fresh,55
+Machu Picchu,atmospheres,ancient,133
+Machu Picchu,atmospheres,mysterious,115
+Machu Picchu,atmospheres,authentic,73
+Machu Picchu,atmospheres,timeless,60
+Machu Picchu,atmospheres,cultural,58
+Machu Picchu,atmospheres,historic,55
+Machu Picchu,services,guided tours,147
+Machu Picchu,services,information center,83
+Machu Picchu,services,maps,97
+Machu Picchu,services,restrooms,71
+Machu Picchu,services,security,64
+Machu Picchu,services,transportation,65
+Machu Picchu,scenery,ruins,108
+Machu Picchu,scenery,architecture,114
+Machu Picchu,scenery,stones,115
+Machu Picchu,scenery,artifacts,71
+Machu Picchu,scenery,monuments,83
+Machu Picchu,scenery,structures,76
+Machu Picchu,attractions,archaeology,123
+Machu Picchu,attractions,history,93
+Machu Picchu,attractions,culture,83
+Machu Picchu,attractions,architecture,93
+Machu Picchu,attractions,artifacts,78
+Machu Picchu,attractions,ruins,80
+Petra,foods,local cuisine,88
+Petra,foods,street food,95
+Petra,foods,authentic,64
+Petra,foods,traditional,68
+Petra,foods,spices,69
+Petra,foods,fresh,57
+Petra,atmospheres,ancient,148
+Petra,atmospheres,mysterious,120
+Petra,atmospheres,authentic,76
+Petra,atmospheres,timeless,67
+Petra,atmospheres,cultural,52
+Petra,atmospheres,historic,64
+Petra,services,guided tours,120
+Petra,services,information center,111
+Petra,services,maps,74
+Petra,services,restrooms,81
+Petra,services,security,78
+Petra,services,transportation,63
+Petra,scenery,ruins,136
+Petra,scenery,architecture,94
+Petra,scenery,stones,115
+Petra,scenery,artifacts,98
+Petra,scenery,monuments,85
+Petra,scenery,structures,69
+Petra,attractions,archaeology,101
+Petra,attractions,history,111
+Petra,attractions,culture,103
+Petra,attractions,architecture,77
+Petra,attractions,artifacts,85
+Petra,attractions,ruins,61
+Pompeii,foods,local cuisine,80
+Pompeii,foods,street food,76
+Pompeii,foods,authentic,68
+Pompeii,foods,traditional,54
+Pompeii,foods,spices,50
+Pompeii,foods,fresh,48
+Pompeii,atmospheres,ancient,138
+Pompeii,atmospheres,mysterious,118
+Pompeii,atmospheres,authentic,100
+Pompeii,atmospheres,timeless,64
+Pompeii,atmospheres,cultural,63
+Pompeii,atmospheres,historic,57
+Pompeii,services,guided tours,146
+Pompeii,services,information center,104
+Pompeii,services,maps,88
+Pompeii,services,restrooms,89
+Pompeii,services,security,65
+Pompeii,services,transportation,49
+Pompeii,scenery,ruins,106
+Pompeii,scenery,architecture,116
+Pompeii,scenery,stones,93
+Pompeii,scenery,artifacts,76
+Pompeii,scenery,monuments,82
+Pompeii,scenery,structures,71
+Pompeii,attractions,archaeology,148
+Pompeii,attractions,history,100
+Pompeii,attractions,culture,91
+Pompeii,attractions,architecture,74
+Pompeii,attractions,artifacts,61
+Pompeii,attractions,ruins,58
+Tikal,foods,local cuisine,111
+Tikal,foods,street food,74
+Tikal,foods,authentic,88
+Tikal,foods,traditional,57
+Tikal,foods,spices,41
+Tikal,foods,fresh,35
+Tikal,atmospheres,ancient,102
+Tikal,atmospheres,mysterious,81
+Tikal,atmospheres,authentic,82
+Tikal,atmospheres,timeless,80
+Tikal,atmospheres,cultural,60
+Tikal,atmospheres,historic,63
+Tikal,services,guided tours,109
+Tikal,services,information center,87
+Tikal,services,maps,92
+Tikal,services,restrooms,82
+Tikal,services,security,76
+Tikal,services,transportation,44
+Tikal,scenery,ruins,109
+Tikal,scenery,architecture,100
+Tikal,scenery,stones,108
+Tikal,scenery,artifacts,89
+Tikal,scenery,monuments,83
+Tikal,scenery,structures,79
+Tikal,attractions,archaeology,148
+Tikal,attractions,history,128
+Tikal,attractions,culture,86
+Tikal,attractions,architecture,84
+Tikal,attractions,artifacts,67
+Tikal,attractions,ruins,60
+Timbuktu,foods,local cuisine,81
+Timbuktu,foods,street food,98
+Timbuktu,foods,authentic,90
+Timbuktu,foods,traditional,80
+Timbuktu,foods,spices,54
+Timbuktu,foods,fresh,49
+Timbuktu,atmospheres,ancient,143
+Timbuktu,atmospheres,mysterious,108
+Timbuktu,atmospheres,authentic,93
+Timbuktu,atmospheres,timeless,62
+Timbuktu,atmospheres,cultural,73
+Timbuktu,atmospheres,historic,69
+Timbuktu,services,guided tours,121
+Timbuktu,services,information center,116
+Timbuktu,services,maps,76
+Timbuktu,services,restrooms,64
+Timbuktu,services,security,57
+Timbuktu,services,transportation,61
+Timbuktu,scenery,ruins,130
+Timbuktu,scenery,architecture,116
+Timbuktu,scenery,stones,119
+Timbuktu,scenery,artifacts,77
+Timbuktu,scenery,monuments,68
+Timbuktu,scenery,structures,72
+Timbuktu,attractions,archaeology,127
+Timbuktu,attractions,history,117
+Timbuktu,attractions,culture,119
+Timbuktu,attractions,architecture,77
+Timbuktu,attractions,artifacts,89
+Timbuktu,attractions,ruins,64
+Amazon Rainforest,foods,packed lunch,89
+Amazon Rainforest,foods,camping food,86
+Amazon Rainforest,foods,local dishes,76
+Amazon Rainforest,foods,fresh fish,57
+Amazon Rainforest,foods,fruits,55
+Amazon Rainforest,foods,organic,31
+Amazon Rainforest,atmospheres,pristine,100
+Amazon Rainforest,atmospheres,wild,101
+Amazon Rainforest,atmospheres,tranquil,96
+Amazon Rainforest,atmospheres,untamed,79
+Amazon Rainforest,atmospheres,natural,66
+Amazon Rainforest,atmospheres,serene,40
+Amazon Rainforest,services,rangers,122
+Amazon Rainforest,services,visitor center,118
+Amazon Rainforest,services,guided tours,82
+Amazon Rainforest,services,camping,83
+Amazon Rainforest,services,boat rental,80
+Amazon Rainforest,services,shuttle,49
+Amazon Rainforest,scenery,landscapes,106
+Amazon Rainforest,scenery,wildlife,119
+Amazon Rainforest,scenery,vegetation,90
+Amazon Rainforest,scenery,waters,97
+Amazon Rainforest,scenery,mountains,67
+Amazon Rainforest,scenery,forests,75
+Amazon Rainforest,attractions,wildlife,150
+Amazon Rainforest,attractions,hiking,117
+Amazon Rainforest,attractions,scenery,105
+Amazon Rainforest,attractions,adventures,79
+Amazon Rainforest,attractions,ecology,79
+Amazon Rainforest,attractions,experiences,65
+Banff National Park,foods,packed lunch,98
+Banff National Park,foods,camping food,69
+Banff National Park,foods,local dishes,53
+Banff National Park,foods,fresh fish,47
+Banff National Park,foods,fruits,53
+Banff National Park,foods,organic,30
+Banff National Park,atmospheres,pristine,127
+Banff National Park,atmospheres,wild,90
+Banff National Park,atmospheres,tranquil,71
+Banff National Park,atmospheres,untamed,64
+Banff National Park,atmospheres,natural,59
+Banff National Park,atmospheres,serene,45
+Banff National Park,services,rangers,130
+Banff National Park,services,visitor center,118
+Banff National Park,services,guided tours,96
+Banff National Park,services,camping,75
+Banff National Park,services,boat rental,75
+Banff National Park,services,shuttle,60
+Banff National Park,scenery,landscapes,123
+Banff National Park,scenery,wildlife,101
+Banff National Park,scenery,vegetation,83
+Banff National Park,scenery,waters,79
+Banff National Park,scenery,mountains,90
+Banff National Park,scenery,forests,74
+Banff National Park,attractions,wildlife,110
+Banff National Park,attractions,hiking,93
+Banff National Park,attractions,scenery,117
+Banff National Park,attractions,adventures,80
+Banff National Park,attractions,ecology,89
+Banff National Park,attractions,experiences,78
+Everglades,foods,packed lunch,88
+Everglades,foods,camping food,61
+Everglades,foods,local dishes,58
+Everglades,foods,fresh fish,67
+Everglades,foods,fruits,37
+Everglades,foods,organic,35
+Everglades,atmospheres,pristine,130
+Everglades,atmospheres,wild,119
+Everglades,atmospheres,tranquil,84
+Everglades,atmospheres,untamed,79
+Everglades,atmospheres,natural,55
+Everglades,atmospheres,serene,53
+Everglades,services,rangers,121
+Everglades,services,visitor center,115
+Everglades,services,guided tours,71
+Everglades,services,camping,65
+Everglades,services,boat rental,60
+Everglades,services,shuttle,42
+Everglades,scenery,landscapes,148
+Everglades,scenery,wildlife,92
+Everglades,scenery,vegetation,114
+Everglades,scenery,waters,99
+Everglades,scenery,mountains,72
+Everglades,scenery,forests,57
+Everglades,attractions,wildlife,102
+Everglades,attractions,hiking,112
+Everglades,attractions,scenery,97
+Everglades,attractions,adventures,89
+Everglades,attractions,ecology,79
+Everglades,attractions,experiences,58
+Galapagos Islands,foods,packed lunch,93
+Galapagos Islands,foods,camping food,64
+Galapagos Islands,foods,local dishes,67
+Galapagos Islands,foods,fresh fish,42
+Galapagos Islands,foods,fruits,36
+Galapagos Islands,foods,organic,41
+Galapagos Islands,atmospheres,pristine,100
+Galapagos Islands,atmospheres,wild,99
+Galapagos Islands,atmospheres,tranquil,99
+Galapagos Islands,atmospheres,untamed,71
+Galapagos Islands,atmospheres,natural,65
+Galapagos Islands,atmospheres,serene,62
+Galapagos Islands,services,rangers,107
+Galapagos Islands,services,visitor center,86
+Galapagos Islands,services,guided tours,86
+Galapagos Islands,services,camping,89
+Galapagos Islands,services,boat rental,53
+Galapagos Islands,services,shuttle,40
+Galapagos Islands,scenery,landscapes,123
+Galapagos Islands,scenery,wildlife,122
+Galapagos Islands,scenery,vegetation,98
+Galapagos Islands,scenery,waters,73
+Galapagos Islands,scenery,mountains,82
+Galapagos Islands,scenery,forests,71
+Galapagos Islands,attractions,wildlife,121
+Galapagos Islands,attractions,hiking,125
+Galapagos Islands,attractions,scenery,89
+Galapagos Islands,attractions,adventures,76
+Galapagos Islands,attractions,ecology,71
+Galapagos Islands,attractions,experiences,53
+Great Barrier Reef,foods,packed lunch,80
+Great Barrier Reef,foods,camping food,69
+Great Barrier Reef,foods,local dishes,57
+Great Barrier Reef,foods,fresh fish,57
+Great Barrier Reef,foods,fruits,60
+Great Barrier Reef,foods,organic,42
+Great Barrier Reef,atmospheres,pristine,96
+Great Barrier Reef,atmospheres,wild,90
+Great Barrier Reef,atmospheres,tranquil,92
+Great Barrier Reef,atmospheres,untamed,75
+Great Barrier Reef,atmospheres,natural,70
+Great Barrier Reef,atmospheres,serene,40
+Great Barrier Reef,services,rangers,110
+Great Barrier Reef,services,visitor center,82
+Great Barrier Reef,services,guided tours,75
+Great Barrier Reef,services,camping,71
+Great Barrier Reef,services,boat rental,59
+Great Barrier Reef,services,shuttle,63
+Great Barrier Reef,scenery,landscapes,104
+Great Barrier Reef,scenery,wildlife,106
+Great Barrier Reef,scenery,vegetation,87
+Great Barrier Reef,scenery,waters,99
+Great Barrier Reef,scenery,mountains,86
+Great Barrier Reef,scenery,forests,63
+Great Barrier Reef,attractions,wildlife,120
+Great Barrier Reef,attractions,hiking,95
+Great Barrier Reef,attractions,scenery,97
+Great Barrier Reef,attractions,adventures,89
+Great Barrier Reef,attractions,ecology,62
+Great Barrier Reef,attractions,experiences,76
+Kruger National Park,foods,packed lunch,73
+Kruger National Park,foods,camping food,63
+Kruger National Park,foods,local dishes,52
+Kruger National Park,foods,fresh fish,67
+Kruger National Park,foods,fruits,33
+Kruger National Park,foods,organic,38
+Kruger National Park,atmospheres,pristine,121
+Kruger National Park,atmospheres,wild,116
+Kruger National Park,atmospheres,tranquil,95
+Kruger National Park,atmospheres,untamed,83
+Kruger National Park,atmospheres,natural,74
+Kruger National Park,atmospheres,serene,58
+Kruger National Park,services,rangers,120
+Kruger National Park,services,visitor center,83
+Kruger National Park,services,guided tours,91
+Kruger National Park,services,camping,84
+Kruger National Park,services,boat rental,63
+Kruger National Park,services,shuttle,57
+Kruger National Park,scenery,landscapes,120
+Kruger National Park,scenery,wildlife,106
+Kruger National Park,scenery,vegetation,110
+Kruger National Park,scenery,waters,93
+Kruger National Park,scenery,mountains,67
+Kruger National Park,scenery,forests,60
+Kruger National Park,attractions,wildlife,123
+Kruger National Park,attractions,hiking,130
+Kruger National Park,attractions,scenery,105
+Kruger National Park,attractions,adventures,74
+Kruger National Park,attractions,ecology,81
+Kruger National Park,attractions,experiences,51
+Serengeti,foods,packed lunch,82
+Serengeti,foods,camping food,66
+Serengeti,foods,local dishes,52
+Serengeti,foods,fresh fish,60
+Serengeti,foods,fruits,44
+Serengeti,foods,organic,54
+Serengeti,atmospheres,pristine,95
+Serengeti,atmospheres,wild,110
+Serengeti,atmospheres,tranquil,76
+Serengeti,atmospheres,untamed,86
+Serengeti,atmospheres,natural,78
+Serengeti,atmospheres,serene,47
+Serengeti,services,rangers,114
+Serengeti,services,visitor center,80
+Serengeti,services,guided tours,78
+Serengeti,services,camping,73
+Serengeti,services,boat rental,52
+Serengeti,services,shuttle,61
+Serengeti,scenery,landscapes,101
+Serengeti,scenery,wildlife,93
+Serengeti,scenery,vegetation,111
+Serengeti,scenery,waters,75
+Serengeti,scenery,mountains,90
+Serengeti,scenery,forests,58
+Serengeti,attractions,wildlife,148
+Serengeti,attractions,hiking,110
+Serengeti,attractions,scenery,111
+Serengeti,attractions,adventures,90
+Serengeti,attractions,ecology,74
+Serengeti,attractions,experiences,63
+Sundarbans,foods,packed lunch,84
+Sundarbans,foods,camping food,80
+Sundarbans,foods,local dishes,60
+Sundarbans,foods,fresh fish,66
+Sundarbans,foods,fruits,57
+Sundarbans,foods,organic,38
+Sundarbans,atmospheres,pristine,90
+Sundarbans,atmospheres,wild,86
+Sundarbans,atmospheres,tranquil,90
+Sundarbans,atmospheres,untamed,61
+Sundarbans,atmospheres,natural,76
+Sundarbans,atmospheres,serene,66
+Sundarbans,services,rangers,103
+Sundarbans,services,visitor center,114
+Sundarbans,services,guided tours,86
+Sundarbans,services,camping,76
+Sundarbans,services,boat rental,68
+Sundarbans,services,shuttle,62
+Sundarbans,scenery,landscapes,108
+Sundarbans,scenery,wildlife,116
+Sundarbans,scenery,vegetation,86
+Sundarbans,scenery,waters,93
+Sundarbans,scenery,mountains,62
+Sundarbans,scenery,forests,59
+Sundarbans,attractions,wildlife,123
+Sundarbans,attractions,hiking,110
+Sundarbans,attractions,scenery,117
+Sundarbans,attractions,adventures,87
+Sundarbans,attractions,ecology,65
+Sundarbans,attractions,experiences,80
+Yellowstone,foods,packed lunch,83
+Yellowstone,foods,camping food,83
+Yellowstone,foods,local dishes,78
+Yellowstone,foods,fresh fish,40
+Yellowstone,foods,fruits,30
+Yellowstone,foods,organic,37
+Yellowstone,atmospheres,pristine,110
+Yellowstone,atmospheres,wild,109
+Yellowstone,atmospheres,tranquil,71
+Yellowstone,atmospheres,untamed,62
+Yellowstone,atmospheres,natural,56
+Yellowstone,atmospheres,serene,66
+Yellowstone,services,rangers,107
+Yellowstone,services,visitor center,99
+Yellowstone,services,guided tours,85
+Yellowstone,services,camping,81
+Yellowstone,services,boat rental,60
+Yellowstone,services,shuttle,54
+Yellowstone,scenery,landscapes,123
+Yellowstone,scenery,wildlife,105
+Yellowstone,scenery,vegetation,102
+Yellowstone,scenery,waters,83
+Yellowstone,scenery,mountains,75
+Yellowstone,scenery,forests,80
+Yellowstone,attractions,wildlife,110
+Yellowstone,attractions,hiking,90
+Yellowstone,attractions,scenery,95
+Yellowstone,attractions,adventures,94
+Yellowstone,attractions,ecology,76
+Yellowstone,attractions,experiences,79
+Yosemite,foods,packed lunch,91
+Yosemite,foods,camping food,89
+Yosemite,foods,local dishes,63
+Yosemite,foods,fresh fish,48
+Yosemite,foods,fruits,58
+Yosemite,foods,organic,51
+Yosemite,atmospheres,pristine,120
+Yosemite,atmospheres,wild,85
+Yosemite,atmospheres,tranquil,94
+Yosemite,atmospheres,untamed,87
+Yosemite,atmospheres,natural,76
+Yosemite,atmospheres,serene,60
+Yosemite,services,rangers,106
+Yosemite,services,visitor center,97
+Yosemite,services,guided tours,90
+Yosemite,services,camping,79
+Yosemite,services,boat rental,60
+Yosemite,services,shuttle,67
+Yosemite,scenery,landscapes,144
+Yosemite,scenery,wildlife,128
+Yosemite,scenery,vegetation,102
+Yosemite,scenery,waters,92
+Yosemite,scenery,mountains,65
+Yosemite,scenery,forests,67
+Yosemite,attractions,wildlife,118
+Yosemite,attractions,hiking,112
+Yosemite,attractions,scenery,96
+Yosemite,attractions,adventures,94
+Yosemite,attractions,ecology,78
+Yosemite,attractions,experiences,61

@@ -1,126 +1,251 @@
-Destination,Category,Year,CognitiveTheme,PositiveSentiment,NegativeSentiment,PositiveCount,NegativeCount,TotalCount,NonEmotionalCount
-Louvre,Museums,2020,Foods,0.75,0.13,74,31,105,7
-Louvre,Museums,2020,Attractions,0.84,0.03,190,37,227,6
-Louvre,Museums,2020,Scenery,0.6,0.16,150,43,193,13
-Louvre,Museums,2020,Services,0.81,0.3,88,46,134,17
-Louvre,Museums,2020,Atmospheres,0.79,0.45,200,18,218,12
-British Museum,Museums,2020,Foods,0.85,0.18,138,37,175,9
-British Museum,Museums,2020,Attractions,0.59,0.18,163,32,195,6
-British Museum,Museums,2020,Scenery,0.69,0.07,153,32,185,5
-British Museum,Museums,2020,Services,0.73,0.2,91,22,113,12
-British Museum,Museums,2020,Atmospheres,0.78,0.24,154,46,200,9
-Smithsonian,Museums,2020,Foods,0.58,0.15,65,24,89,19
-Smithsonian,Museums,2020,Attractions,0.65,0.16,190,14,204,17
-Smithsonian,Museums,2020,Scenery,0.81,0.08,142,30,172,17
-Smithsonian,Museums,2020,Services,0.98,0.0,56,43,99,15
-Smithsonian,Museums,2020,Atmospheres,0.75,0.2,136,34,170,11
-Rijksmuseum,Museums,2020,Foods,0.92,0.05,187,19,206,18
-Rijksmuseum,Museums,2020,Attractions,0.94,0.02,171,42,213,20
-Rijksmuseum,Museums,2020,Scenery,0.98,0.26,77,27,104,5
-Rijksmuseum,Museums,2020,Services,0.86,0.24,77,26,103,20
-Rijksmuseum,Museums,2020,Atmospheres,0.51,0.43,181,32,213,15
-Metropolitan Museum,Museums,2020,Foods,0.93,0.13,86,27,113,17
-Metropolitan Museum,Museums,2020,Attractions,0.95,0.24,170,12,182,6
-Metropolitan Museum,Museums,2020,Scenery,0.52,0.21,117,38,155,13
-Metropolitan Museum,Museums,2020,Services,0.53,0.37,156,23,179,14
-Metropolitan Museum,Museums,2020,Atmospheres,0.66,0.39,90,48,138,12
-Vatican City,Religious sites,2020,Foods,0.91,0.47,114,31,145,9
-Vatican City,Religious sites,2020,Attractions,0.87,0.3,55,32,87,15
-Vatican City,Religious sites,2020,Scenery,0.66,0.02,75,35,110,8
-Vatican City,Religious sites,2020,Services,0.71,0.43,179,50,229,9
-Vatican City,Religious sites,2020,Atmospheres,0.71,0.37,132,22,154,19
-Mecca,Religious sites,2020,Foods,0.54,0.26,162,46,208,10
-Mecca,Religious sites,2020,Attractions,0.66,0.23,126,34,160,19
-Mecca,Religious sites,2020,Scenery,0.8,0.07,190,30,220,15
-Mecca,Religious sites,2020,Services,0.57,0.15,197,12,209,16
-Mecca,Religious sites,2020,Atmospheres,0.85,0.1,92,43,135,11
-Golden Temple,Religious sites,2020,Foods,0.82,0.44,85,21,106,9
-Golden Temple,Religious sites,2020,Attractions,0.8,0.39,64,20,84,14
-Golden Temple,Religious sites,2020,Scenery,0.73,0.4,143,47,190,5
-Golden Temple,Religious sites,2020,Services,0.96,0.1,87,42,129,20
-Golden Temple,Religious sites,2020,Atmospheres,0.86,0.46,73,12,85,16
-Angkor Wat,Religious sites,2020,Foods,0.73,0.26,113,21,134,20
-Angkor Wat,Religious sites,2020,Attractions,0.95,0.05,130,44,174,18
-Angkor Wat,Religious sites,2020,Scenery,0.84,0.41,84,35,119,11
-Angkor Wat,Religious sites,2020,Services,0.55,0.31,69,27,96,14
-Angkor Wat,Religious sites,2020,Atmospheres,0.7,0.33,144,49,193,6
-Notre Dame,Religious sites,2020,Foods,0.54,0.46,159,17,176,7
-Notre Dame,Religious sites,2020,Attractions,0.91,0.2,94,26,120,19
-Notre Dame,Religious sites,2020,Scenery,0.56,0.19,152,36,188,11
-Notre Dame,Religious sites,2020,Services,0.54,0.12,89,21,110,17
-Notre Dame,Religious sites,2020,Atmospheres,0.71,0.07,104,20,124,9
-Central Park,City parks,2020,Foods,0.81,0.25,181,12,193,12
-Central Park,City parks,2020,Attractions,0.67,0.03,194,17,211,11
-Central Park,City parks,2020,Scenery,0.59,0.31,131,40,171,19
-Central Park,City parks,2020,Services,0.97,0.22,116,37,153,16
-Central Park,City parks,2020,Atmospheres,0.67,0.17,62,14,76,17
-Hyde Park,City parks,2020,Foods,0.92,0.28,106,36,142,10
-Hyde Park,City parks,2020,Attractions,0.87,0.11,112,16,128,6
-Hyde Park,City parks,2020,Scenery,0.95,0.15,115,33,148,14
-Hyde Park,City parks,2020,Services,0.77,0.3,166,17,183,16
-Hyde Park,City parks,2020,Atmospheres,0.6,0.27,82,21,103,12
-Golden Gate Park,City parks,2020,Foods,0.61,0.3,100,26,126,6
-Golden Gate Park,City parks,2020,Attractions,0.94,0.2,199,35,234,17
-Golden Gate Park,City parks,2020,Scenery,0.62,0.34,117,30,147,9
-Golden Gate Park,City parks,2020,Services,0.84,0.28,50,48,98,18
-Golden Gate Park,City parks,2020,Atmospheres,0.54,0.04,75,17,92,14
-Yoyogi Park,City parks,2020,Foods,0.89,0.36,110,41,151,15
-Yoyogi Park,City parks,2020,Attractions,0.96,0.3,180,36,216,7
-Yoyogi Park,City parks,2020,Scenery,0.75,0.18,121,12,133,14
-Yoyogi Park,City parks,2020,Services,0.86,0.48,53,22,75,9
-Yoyogi Park,City parks,2020,Atmospheres,0.51,0.45,166,16,182,11
-Ueno Park,City parks,2020,Foods,0.86,0.34,136,46,182,19
-Ueno Park,City parks,2020,Attractions,0.54,0.45,116,11,127,20
-Ueno Park,City parks,2020,Scenery,0.61,0.37,63,30,93,13
-Ueno Park,City parks,2020,Services,0.67,0.06,174,26,200,18
-Ueno Park,City parks,2020,Atmospheres,0.58,0.09,131,32,163,14
-Kyoto,Ancient towns,2020,Foods,0.8,0.15,76,35,111,10
-Kyoto,Ancient towns,2020,Attractions,0.74,0.02,103,27,130,16
-Kyoto,Ancient towns,2020,Scenery,0.66,0.08,196,16,212,13
-Kyoto,Ancient towns,2020,Services,0.81,0.05,68,14,82,10
-Kyoto,Ancient towns,2020,Atmospheres,0.98,0.45,199,32,231,8
-Pompeii,Ancient towns,2020,Foods,0.66,0.3,191,48,239,7
-Pompeii,Ancient towns,2020,Attractions,0.76,0.29,160,46,206,14
-Pompeii,Ancient towns,2020,Scenery,0.57,0.31,53,43,96,12
-Pompeii,Ancient towns,2020,Services,0.57,0.37,105,49,154,6
-Pompeii,Ancient towns,2020,Atmospheres,1.0,0.49,61,36,97,13
-Luang Prabang,Ancient towns,2020,Foods,0.78,0.22,91,14,105,18
-Luang Prabang,Ancient towns,2020,Attractions,0.99,0.22,139,35,174,16
-Luang Prabang,Ancient towns,2020,Scenery,0.83,0.48,140,40,180,17
-Luang Prabang,Ancient towns,2020,Services,0.8,0.25,123,19,142,19
-Luang Prabang,Ancient towns,2020,Atmospheres,0.92,0.35,194,28,222,17
-Bhaktapur,Ancient towns,2020,Foods,0.91,0.3,197,46,243,8
-Bhaktapur,Ancient towns,2020,Attractions,0.56,0.32,130,12,142,13
-Bhaktapur,Ancient towns,2020,Scenery,0.85,0.16,84,31,115,8
-Bhaktapur,Ancient towns,2020,Services,0.69,0.2,82,48,130,17
-Bhaktapur,Ancient towns,2020,Atmospheres,0.69,0.08,91,25,116,14
-Hoi An,Ancient towns,2020,Foods,0.86,0.02,71,41,112,20
-Hoi An,Ancient towns,2020,Attractions,0.97,0.32,155,48,203,6
-Hoi An,Ancient towns,2020,Scenery,0.96,0.19,187,18,205,6
-Hoi An,Ancient towns,2020,Services,0.72,0.23,116,15,131,18
-Hoi An,Ancient towns,2020,Atmospheres,0.74,0.32,84,28,112,9
-Yellowstone,Ecological sites,2020,Foods,0.7,0.28,134,38,172,16
-Yellowstone,Ecological sites,2020,Attractions,0.63,0.22,93,23,116,12
-Yellowstone,Ecological sites,2020,Scenery,0.55,0.43,129,32,161,14
-Yellowstone,Ecological sites,2020,Services,0.51,0.43,187,44,231,6
-Yellowstone,Ecological sites,2020,Atmospheres,0.81,0.22,141,16,157,14
-Serengeti,Ecological sites,2020,Foods,0.67,0.49,158,15,173,14
-Serengeti,Ecological sites,2020,Attractions,0.58,0.06,94,13,107,15
-Serengeti,Ecological sites,2020,Scenery,0.54,0.04,91,16,107,7
-Serengeti,Ecological sites,2020,Services,0.96,0.4,107,17,124,19
-Serengeti,Ecological sites,2020,Atmospheres,0.99,0.14,198,20,218,18
-Amazon Rainforest,Ecological sites,2020,Foods,0.76,0.11,63,50,113,13
-Amazon Rainforest,Ecological sites,2020,Attractions,0.59,0.43,126,45,171,12
-Amazon Rainforest,Ecological sites,2020,Scenery,0.94,0.4,79,32,111,12
-Amazon Rainforest,Ecological sites,2020,Services,0.98,0.13,113,46,159,6
-Amazon Rainforest,Ecological sites,2020,Atmospheres,0.75,0.47,120,10,130,13
-Great Barrier Reef,Ecological sites,2020,Foods,0.59,0.15,87,23,110,10
-Great Barrier Reef,Ecological sites,2020,Attractions,0.99,0.23,171,34,205,6
-Great Barrier Reef,Ecological sites,2020,Scenery,0.56,0.04,86,41,127,12
-Great Barrier Reef,Ecological sites,2020,Services,0.53,0.03,172,20,192,8
-Great Barrier Reef,Ecological sites,2020,Atmospheres,0.57,0.22,130,43,173,12
-Galapagos Islands,Ecological sites,2020,Foods,0.83,0.1,104,38,142,6
-Galapagos Islands,Ecological sites,2020,Attractions,0.88,0.0,94,30,124,11
-Galapagos Islands,Ecological sites,2020,Scenery,0.98,0.01,101,14,115,19
-Galapagos Islands,Ecological sites,2020,Services,0.86,0.48,191,39,230,11
-Galapagos Islands,Ecological sites,2020,Atmospheres,0.9,0.07,114,10,124,10
+Destination,Category,Year,Cognitive Theme,Positive Sentiment,Negative Sentiment,Positive Count,Negative Count,Total Count,Non-Emotional Count
+Louvre,Museums,2020,Foods,0.73,0.04,85,16,101,20
+Louvre,Museums,2020,Attractions,0.76,0.25,102,46,148,12
+Louvre,Museums,2020,Scenery,0.55,0.24,116,17,133,9
+Louvre,Museums,2020,Services,0.85,0.14,131,25,156,13
+Louvre,Museums,2020,Atmospheres,0.57,0.26,148,40,188,15
+British Museum,Museums,2020,Foods,0.99,0.3,84,28,112,13
+British Museum,Museums,2020,Attractions,0.53,0.29,112,31,143,17
+British Museum,Museums,2020,Scenery,0.74,0.11,161,18,179,8
+British Museum,Museums,2020,Services,0.76,0.14,62,32,94,5
+British Museum,Museums,2020,Atmospheres,0.98,0.1,181,39,220,16
+Smithsonian,Museums,2020,Foods,0.87,0.09,185,36,221,5
+Smithsonian,Museums,2020,Attractions,0.6,0.05,85,20,105,5
+Smithsonian,Museums,2020,Scenery,0.96,0.13,171,22,193,5
+Smithsonian,Museums,2020,Services,0.81,0.25,141,17,158,11
+Smithsonian,Museums,2020,Atmospheres,0.56,0.09,100,26,126,17
+Rijksmuseum,Museums,2020,Foods,0.79,0.49,98,28,126,10
+Rijksmuseum,Museums,2020,Attractions,0.54,0.43,92,32,124,20
+Rijksmuseum,Museums,2020,Scenery,0.84,0.43,56,10,66,18
+Rijksmuseum,Museums,2020,Services,0.51,0.35,78,42,120,15
+Rijksmuseum,Museums,2020,Atmospheres,0.77,0.11,163,46,209,15
+Metropolitan Museum,Museums,2020,Foods,0.53,0.15,154,43,197,7
+Metropolitan Museum,Museums,2020,Attractions,0.85,0.11,67,37,104,8
+Metropolitan Museum,Museums,2020,Scenery,0.52,0.24,110,29,139,5
+Metropolitan Museum,Museums,2020,Services,0.85,0.05,68,37,105,5
+Metropolitan Museum,Museums,2020,Atmospheres,0.61,0.42,110,30,140,14
+Uffizi Gallery,Museums,2020,Foods,0.81,0.13,58,16,74,5
+Uffizi Gallery,Museums,2020,Attractions,0.67,0.47,175,13,188,14
+Uffizi Gallery,Museums,2020,Scenery,0.61,0.18,90,39,129,7
+Uffizi Gallery,Museums,2020,Services,0.8,0.33,171,41,212,14
+Uffizi Gallery,Museums,2020,Atmospheres,0.59,0.39,85,12,97,11
+Guggenheim,Museums,2020,Foods,0.76,0.36,78,38,116,10
+Guggenheim,Museums,2020,Attractions,0.76,0.18,181,20,201,15
+Guggenheim,Museums,2020,Scenery,0.76,0.25,106,24,130,17
+Guggenheim,Museums,2020,Services,0.63,0.05,62,43,105,17
+Guggenheim,Museums,2020,Atmospheres,0.57,0.1,140,15,155,20
+Getty Center,Museums,2020,Foods,0.66,0.2,155,35,190,7
+Getty Center,Museums,2020,Attractions,0.99,0.32,69,15,84,19
+Getty Center,Museums,2020,Scenery,0.69,0.39,181,36,217,13
+Getty Center,Museums,2020,Services,0.93,0.13,93,36,129,19
+Getty Center,Museums,2020,Atmospheres,0.74,0.45,164,22,186,20
+Hermitage,Museums,2020,Foods,0.82,0.41,89,41,130,19
+Hermitage,Museums,2020,Attractions,0.96,0.46,111,10,121,19
+Hermitage,Museums,2020,Scenery,0.71,0.4,160,47,207,17
+Hermitage,Museums,2020,Services,0.89,0.39,178,11,189,13
+Hermitage,Museums,2020,Atmospheres,0.97,0.07,176,49,225,18
+National Gallery,Museums,2020,Foods,0.66,0.16,138,24,162,12
+National Gallery,Museums,2020,Attractions,0.63,0.04,88,11,99,10
+National Gallery,Museums,2020,Scenery,0.92,0.41,136,49,185,6
+National Gallery,Museums,2020,Services,0.56,0.06,68,27,95,19
+National Gallery,Museums,2020,Atmospheres,0.66,0.24,105,37,142,8
+Vatican City,Religious sites,2020,Foods,0.67,0.29,57,39,96,9
+Vatican City,Religious sites,2020,Attractions,0.55,0.1,108,31,139,19
+Vatican City,Religious sites,2020,Scenery,0.71,0.24,169,40,209,11
+Vatican City,Religious sites,2020,Services,0.87,0.16,88,21,109,16
+Vatican City,Religious sites,2020,Atmospheres,0.98,0.15,186,41,227,13
+Mecca,Religious sites,2020,Foods,0.77,0.39,56,31,87,14
+Mecca,Religious sites,2020,Attractions,0.6,0.41,170,19,189,12
+Mecca,Religious sites,2020,Scenery,0.67,0.22,69,43,112,20
+Mecca,Religious sites,2020,Services,0.65,0.34,110,43,153,6
+Mecca,Religious sites,2020,Atmospheres,0.51,0.06,132,20,152,6
+Golden Temple,Religious sites,2020,Foods,0.82,0.21,52,29,81,17
+Golden Temple,Religious sites,2020,Attractions,0.63,0.04,71,15,86,11
+Golden Temple,Religious sites,2020,Scenery,0.81,0.06,127,43,170,8
+Golden Temple,Religious sites,2020,Services,0.91,0.18,150,15,165,5
+Golden Temple,Religious sites,2020,Atmospheres,0.5,0.06,156,42,198,12
+Angkor Wat,Religious sites,2020,Foods,0.6,0.28,182,11,193,5
+Angkor Wat,Religious sites,2020,Attractions,0.92,0.03,189,37,226,5
+Angkor Wat,Religious sites,2020,Scenery,0.91,0.43,166,16,182,19
+Angkor Wat,Religious sites,2020,Services,0.67,0.09,131,18,149,6
+Angkor Wat,Religious sites,2020,Atmospheres,0.52,0.29,99,34,133,13
+Notre Dame,Religious sites,2020,Foods,0.98,0.07,114,20,134,9
+Notre Dame,Religious sites,2020,Attractions,0.57,0.07,119,20,139,16
+Notre Dame,Religious sites,2020,Scenery,0.87,0.45,165,45,210,18
+Notre Dame,Religious sites,2020,Services,0.51,0.27,64,21,85,12
+Notre Dame,Religious sites,2020,Atmospheres,0.57,0.19,64,37,101,11
+Shwedagon Pagoda,Religious sites,2020,Foods,0.72,0.29,70,28,98,7
+Shwedagon Pagoda,Religious sites,2020,Attractions,0.71,0.11,79,10,89,16
+Shwedagon Pagoda,Religious sites,2020,Scenery,0.79,0.22,108,42,150,14
+Shwedagon Pagoda,Religious sites,2020,Services,0.88,0.38,74,36,110,11
+Shwedagon Pagoda,Religious sites,2020,Atmospheres,0.65,0.03,192,20,212,10
+Salt Lake Temple,Religious sites,2020,Foods,0.72,0.22,79,43,122,15
+Salt Lake Temple,Religious sites,2020,Attractions,0.56,0.48,118,45,163,17
+Salt Lake Temple,Religious sites,2020,Scenery,0.79,0.03,174,44,218,20
+Salt Lake Temple,Religious sites,2020,Services,0.74,0.23,78,12,90,6
+Salt Lake Temple,Religious sites,2020,Atmospheres,0.93,0.46,107,36,143,9
+Western Wall,Religious sites,2020,Foods,0.51,0.36,176,19,195,7
+Western Wall,Religious sites,2020,Attractions,0.97,0.48,149,35,184,13
+Western Wall,Religious sites,2020,Scenery,0.51,0.29,59,34,93,16
+Western Wall,Religious sites,2020,Services,0.59,0.03,51,50,101,7
+Western Wall,Religious sites,2020,Atmospheres,0.7,0.24,67,22,89,5
+Sagrada Familia,Religious sites,2020,Foods,0.59,0.07,69,49,118,20
+Sagrada Familia,Religious sites,2020,Attractions,0.91,0.12,130,40,170,7
+Sagrada Familia,Religious sites,2020,Scenery,0.99,0.3,181,28,209,11
+Sagrada Familia,Religious sites,2020,Services,0.57,0.25,139,42,181,5
+Sagrada Familia,Religious sites,2020,Atmospheres,0.98,0.3,74,26,100,20
+St. Peter's Basilica,Religious sites,2020,Foods,0.89,0.11,54,44,98,12
+St. Peter's Basilica,Religious sites,2020,Attractions,0.56,0.27,53,42,95,6
+St. Peter's Basilica,Religious sites,2020,Scenery,0.78,0.45,119,12,131,15
+St. Peter's Basilica,Religious sites,2020,Services,0.56,0.29,180,14,194,6
+St. Peter's Basilica,Religious sites,2020,Atmospheres,0.53,0.19,90,46,136,10
+Central Park,City parks,2020,Foods,0.76,0.26,144,35,179,12
+Central Park,City parks,2020,Attractions,0.67,0.0,134,14,148,5
+Central Park,City parks,2020,Scenery,0.59,0.23,141,44,185,6
+Central Park,City parks,2020,Services,1.0,0.32,148,41,189,15
+Central Park,City parks,2020,Atmospheres,0.67,0.24,62,10,72,8
+Hyde Park,City parks,2020,Foods,0.52,0.15,146,27,173,18
+Hyde Park,City parks,2020,Attractions,0.94,0.18,192,14,206,15
+Hyde Park,City parks,2020,Scenery,0.76,0.49,146,24,170,17
+Hyde Park,City parks,2020,Services,0.65,0.5,128,46,174,10
+Hyde Park,City parks,2020,Atmospheres,0.58,0.11,110,43,153,11
+Golden Gate Park,City parks,2020,Foods,0.88,0.0,57,26,83,20
+Golden Gate Park,City parks,2020,Attractions,0.88,0.21,149,50,199,14
+Golden Gate Park,City parks,2020,Scenery,0.61,0.04,168,23,191,11
+Golden Gate Park,City parks,2020,Services,0.64,0.14,177,34,211,8
+Golden Gate Park,City parks,2020,Atmospheres,0.67,0.16,138,31,169,12
+Yoyogi Park,City parks,2020,Foods,0.75,0.22,195,41,236,13
+Yoyogi Park,City parks,2020,Attractions,0.92,0.48,132,31,163,17
+Yoyogi Park,City parks,2020,Scenery,0.79,0.45,135,36,171,18
+Yoyogi Park,City parks,2020,Services,0.73,0.36,72,18,90,19
+Yoyogi Park,City parks,2020,Atmospheres,0.89,0.06,55,17,72,7
+Ueno Park,City parks,2020,Foods,0.53,0.26,171,23,194,17
+Ueno Park,City parks,2020,Attractions,0.74,0.47,79,36,115,6
+Ueno Park,City parks,2020,Scenery,0.93,0.0,99,37,136,10
+Ueno Park,City parks,2020,Services,0.86,0.43,116,24,140,5
+Ueno Park,City parks,2020,Atmospheres,0.65,0.09,66,44,110,10
+Balboa Park,City parks,2020,Foods,0.61,0.09,165,28,193,19
+Balboa Park,City parks,2020,Attractions,0.77,0.39,137,36,173,5
+Balboa Park,City parks,2020,Scenery,0.8,0.15,132,12,144,9
+Balboa Park,City parks,2020,Services,0.88,0.07,88,49,137,17
+Balboa Park,City parks,2020,Atmospheres,0.56,0.28,53,10,63,12
+Griffith Park,City parks,2020,Foods,0.82,0.41,73,23,96,8
+Griffith Park,City parks,2020,Attractions,0.78,0.24,163,32,195,14
+Griffith Park,City parks,2020,Scenery,0.99,0.24,73,27,100,17
+Griffith Park,City parks,2020,Services,0.97,0.4,175,23,198,8
+Griffith Park,City parks,2020,Atmospheres,0.89,0.21,172,24,196,6
+Chapultepec Park,City parks,2020,Foods,0.66,0.37,64,49,113,16
+Chapultepec Park,City parks,2020,Attractions,0.75,0.35,133,39,172,14
+Chapultepec Park,City parks,2020,Scenery,0.52,0.38,80,30,110,10
+Chapultepec Park,City parks,2020,Services,0.9,0.46,162,23,185,8
+Chapultepec Park,City parks,2020,Atmospheres,0.63,0.3,83,39,122,15
+Mount Royal Park,City parks,2020,Foods,0.8,0.26,90,20,110,16
+Mount Royal Park,City parks,2020,Attractions,0.75,0.41,181,14,195,9
+Mount Royal Park,City parks,2020,Scenery,0.81,0.05,103,21,124,16
+Mount Royal Park,City parks,2020,Services,0.93,0.47,145,41,186,19
+Mount Royal Park,City parks,2020,Atmospheres,0.93,0.24,189,42,231,9
+Prospect Park,City parks,2020,Foods,0.89,0.3,159,16,175,11
+Prospect Park,City parks,2020,Attractions,0.57,0.15,141,36,177,17
+Prospect Park,City parks,2020,Scenery,0.79,0.32,194,36,230,6
+Prospect Park,City parks,2020,Services,0.98,0.09,189,36,225,17
+Prospect Park,City parks,2020,Atmospheres,0.82,0.16,50,11,61,7
+Kyoto,Ancient towns,2020,Foods,0.54,0.39,72,43,115,8
+Kyoto,Ancient towns,2020,Attractions,0.74,0.47,178,29,207,17
+Kyoto,Ancient towns,2020,Scenery,0.68,0.4,137,14,151,9
+Kyoto,Ancient towns,2020,Services,0.91,0.49,172,29,201,18
+Kyoto,Ancient towns,2020,Atmospheres,0.99,0.16,90,36,126,11
+Pompeii,Ancient towns,2020,Foods,0.72,0.25,142,15,157,10
+Pompeii,Ancient towns,2020,Attractions,0.76,0.48,91,50,141,12
+Pompeii,Ancient towns,2020,Scenery,0.91,0.37,152,15,167,16
+Pompeii,Ancient towns,2020,Services,0.74,0.16,167,46,213,9
+Pompeii,Ancient towns,2020,Atmospheres,0.65,0.21,168,25,193,7
+Luang Prabang,Ancient towns,2020,Foods,0.74,0.03,114,42,156,5
+Luang Prabang,Ancient towns,2020,Attractions,0.92,0.42,98,24,122,6
+Luang Prabang,Ancient towns,2020,Scenery,0.7,0.29,111,27,138,12
+Luang Prabang,Ancient towns,2020,Services,0.52,0.01,104,12,116,16
+Luang Prabang,Ancient towns,2020,Atmospheres,0.86,0.08,71,23,94,20
+Bhaktapur,Ancient towns,2020,Foods,0.68,0.5,116,48,164,14
+Bhaktapur,Ancient towns,2020,Attractions,0.94,0.02,158,14,172,17
+Bhaktapur,Ancient towns,2020,Scenery,0.64,0.06,121,28,149,7
+Bhaktapur,Ancient towns,2020,Services,0.9,0.14,132,30,162,5
+Bhaktapur,Ancient towns,2020,Atmospheres,0.92,0.02,181,22,203,20
+Hoi An,Ancient towns,2020,Foods,0.91,0.46,191,40,231,6
+Hoi An,Ancient towns,2020,Attractions,0.85,0.26,116,46,162,8
+Hoi An,Ancient towns,2020,Scenery,0.68,0.4,158,39,197,19
+Hoi An,Ancient towns,2020,Services,0.7,0.36,135,42,177,11
+Hoi An,Ancient towns,2020,Atmospheres,0.62,0.48,194,11,205,15
+Timbuktu,Ancient towns,2020,Foods,0.86,0.16,194,10,204,13
+Timbuktu,Ancient towns,2020,Attractions,0.74,0.25,196,33,229,20
+Timbuktu,Ancient towns,2020,Scenery,0.58,0.02,154,24,178,10
+Timbuktu,Ancient towns,2020,Services,0.68,0.08,85,28,113,8
+Timbuktu,Ancient towns,2020,Atmospheres,0.86,0.03,185,21,206,18
+Giza,Ancient towns,2020,Foods,0.84,0.06,178,38,216,17
+Giza,Ancient towns,2020,Attractions,0.73,0.29,186,17,203,15
+Giza,Ancient towns,2020,Scenery,0.6,0.05,162,46,208,18
+Giza,Ancient towns,2020,Services,0.66,0.19,161,10,171,13
+Giza,Ancient towns,2020,Atmospheres,0.9,0.19,86,14,100,15
+Petra,Ancient towns,2020,Foods,0.76,0.43,111,48,159,17
+Petra,Ancient towns,2020,Attractions,0.97,0.05,179,10,189,20
+Petra,Ancient towns,2020,Scenery,0.65,0.0,194,33,227,18
+Petra,Ancient towns,2020,Services,0.62,0.49,170,34,204,12
+Petra,Ancient towns,2020,Atmospheres,0.89,0.22,89,35,124,6
+Machu Picchu,Ancient towns,2020,Foods,0.97,0.1,95,24,119,7
+Machu Picchu,Ancient towns,2020,Attractions,0.82,0.02,56,18,74,14
+Machu Picchu,Ancient towns,2020,Scenery,0.79,0.25,122,14,136,14
+Machu Picchu,Ancient towns,2020,Services,0.71,0.16,104,33,137,14
+Machu Picchu,Ancient towns,2020,Atmospheres,0.67,0.06,105,45,150,15
+Tikal,Ancient towns,2020,Foods,0.67,0.44,160,27,187,19
+Tikal,Ancient towns,2020,Attractions,0.79,0.04,168,48,216,5
+Tikal,Ancient towns,2020,Scenery,0.88,0.29,130,11,141,6
+Tikal,Ancient towns,2020,Services,0.84,0.05,120,38,158,6
+Tikal,Ancient towns,2020,Atmospheres,0.89,0.44,199,16,215,7
+Yellowstone,Ecological sites,2020,Foods,0.9,0.02,62,34,96,20
+Yellowstone,Ecological sites,2020,Attractions,0.86,0.03,64,14,78,9
+Yellowstone,Ecological sites,2020,Scenery,0.92,0.28,170,40,210,13
+Yellowstone,Ecological sites,2020,Services,0.61,0.38,187,43,230,9
+Yellowstone,Ecological sites,2020,Atmospheres,0.91,0.36,123,36,159,16
+Serengeti,Ecological sites,2020,Foods,0.53,0.2,177,18,195,16
+Serengeti,Ecological sites,2020,Attractions,0.72,0.3,82,17,99,14
+Serengeti,Ecological sites,2020,Scenery,0.87,0.44,143,43,186,10
+Serengeti,Ecological sites,2020,Services,0.82,0.14,128,10,138,5
+Serengeti,Ecological sites,2020,Atmospheres,0.91,0.07,124,19,143,18
+Amazon Rainforest,Ecological sites,2020,Foods,0.97,0.45,81,41,122,12
+Amazon Rainforest,Ecological sites,2020,Attractions,0.73,0.42,136,21,157,19
+Amazon Rainforest,Ecological sites,2020,Scenery,0.57,0.04,194,27,221,20
+Amazon Rainforest,Ecological sites,2020,Services,0.71,0.39,91,16,107,18
+Amazon Rainforest,Ecological sites,2020,Atmospheres,0.75,0.06,136,40,176,16
+Great Barrier Reef,Ecological sites,2020,Foods,0.79,0.36,116,32,148,17
+Great Barrier Reef,Ecological sites,2020,Attractions,0.77,0.5,65,40,105,14
+Great Barrier Reef,Ecological sites,2020,Scenery,0.98,0.13,101,14,115,14
+Great Barrier Reef,Ecological sites,2020,Services,0.72,0.21,159,40,199,9
+Great Barrier Reef,Ecological sites,2020,Atmospheres,0.87,0.2,196,32,228,5
+Galapagos Islands,Ecological sites,2020,Foods,0.55,0.19,191,12,203,15
+Galapagos Islands,Ecological sites,2020,Attractions,0.88,0.29,135,29,164,8
+Galapagos Islands,Ecological sites,2020,Scenery,0.71,0.21,119,46,165,9
+Galapagos Islands,Ecological sites,2020,Services,0.87,0.18,86,21,107,5
+Galapagos Islands,Ecological sites,2020,Atmospheres,0.62,0.17,83,38,121,7
+Kruger National Park,Ecological sites,2020,Foods,0.85,0.08,146,26,172,17
+Kruger National Park,Ecological sites,2020,Attractions,0.56,0.41,187,13,200,16
+Kruger National Park,Ecological sites,2020,Scenery,0.79,0.4,145,39,184,8
+Kruger National Park,Ecological sites,2020,Services,0.69,0.08,107,45,152,16
+Kruger National Park,Ecological sites,2020,Atmospheres,0.66,0.24,170,31,201,12
+Everglades,Ecological sites,2020,Foods,0.61,0.21,149,21,170,20
+Everglades,Ecological sites,2020,Attractions,0.62,0.37,90,19,109,10
+Everglades,Ecological sites,2020,Scenery,0.6,0.4,182,39,221,20
+Everglades,Ecological sites,2020,Services,0.8,0.35,127,19,146,7
+Everglades,Ecological sites,2020,Atmospheres,0.96,0.28,131,36,167,12
+Banff National Park,Ecological sites,2020,Foods,0.65,0.5,74,23,97,17
+Banff National Park,Ecological sites,2020,Attractions,0.85,0.23,123,17,140,18
+Banff National Park,Ecological sites,2020,Scenery,0.54,0.05,176,20,196,15
+Banff National Park,Ecological sites,2020,Services,0.76,0.42,152,22,174,18
+Banff National Park,Ecological sites,2020,Atmospheres,0.98,0.45,160,40,200,19
+Yosemite,Ecological sites,2020,Foods,0.64,0.35,107,40,147,15
+Yosemite,Ecological sites,2020,Attractions,0.71,0.19,127,40,167,8
+Yosemite,Ecological sites,2020,Scenery,0.88,0.29,116,22,138,19
+Yosemite,Ecological sites,2020,Services,0.88,0.46,126,15,141,8
+Yosemite,Ecological sites,2020,Atmospheres,0.9,0.03,80,17,97,7
+Sundarbans,Ecological sites,2020,Foods,0.64,0.23,190,45,235,6
+Sundarbans,Ecological sites,2020,Attractions,0.76,0.01,187,39,226,7
+Sundarbans,Ecological sites,2020,Scenery,0.6,0.2,173,19,192,20
+Sundarbans,Ecological sites,2020,Services,0.7,0.28,163,22,185,12
+Sundarbans,Ecological sites,2020,Atmospheres,0.96,0.43,199,14,213,8
