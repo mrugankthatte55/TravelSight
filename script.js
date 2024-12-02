@@ -135,245 +135,235 @@ function addDestination() {
     const selectedDestination = d3.select("#search").property("value");
     if (selectedDestination && !currentlyShownDestinations[category].includes(selectedDestination)) {
         currentlyShownDestinations[category].push(selectedDestination);
-        d3.csv("sentiment_matrix_historical.csv").then(data => renderMatrix(data));
+        
+        // Get the current view
+        const currentView = d3.select(".view-btn.selected").attr("id");
+        
+        d3.csv("sentiment_matrix_historical.csv").then(data => {
+            // Update the destinations list first
+            const allDestinations = Array.from(
+                new Set(data.filter(d => d.Category === category).map(d => d.Destination))
+            );
+            updateSearchDropdown(allDestinations, currentlyShownDestinations[category]);
+            updateSelectedDestinations(currentlyShownDestinations[category]);
+            
+            // Render the appropriate visualization
+            if (currentView === "overview") {
+                renderMatrix(data);
+            } else if (currentView === "radar_detail") {
+                renderRadarChart(data);
+            } else if (currentView === "time_series") {
+                renderTimeSeries(data);
+            }
+        });
     }
 }
 
 function removeDestination(destination) {
     const category = d3.select("#category").property("value");
     currentlyShownDestinations[category] = currentlyShownDestinations[category].filter(dest => dest !== destination);
-    d3.csv("sentiment_matrix_historical.csv").then(data => renderMatrix(data));
+    
+    // Get the current view
+    const currentView = d3.select(".view-btn.selected").attr("id");
+    
+    d3.csv("sentiment_matrix_historical.csv").then(data => {
+        // Update the destinations list first
+        const allDestinations = Array.from(
+            new Set(data.filter(d => d.Category === category).map(d => d.Destination))
+        );
+        updateSearchDropdown(allDestinations, currentlyShownDestinations[category]);
+        updateSelectedDestinations(currentlyShownDestinations[category]);
+        
+        // Render the appropriate visualization
+        if (currentView === "overview") {
+            renderMatrix(data);
+        } else if (currentView === "radar_detail") {
+            renderRadarChart(data);
+        } else if (currentView === "time_series") {
+            renderTimeSeries(data);
+        }
+    });
+}
+
+function processWordCloudData(data, destination, theme) {
+    return data
+        .filter(d => d.Location === destination && d.Theme === theme)
+        .reduce((acc, curr) => {
+            const existing = acc.find(item => item.text === curr.Word);
+            if (existing) {
+                existing.size += curr.Frequency;
+            } else {
+                acc.push({
+                    text: curr.Word,
+                    size: curr.Frequency
+                });
+            }
+            return acc;
+        }, [])
+        .sort((a, b) => b.size - a.size)
+        .slice(0, 6);
 }
 
 function renderRadarChart(data) {
-    const margin = { top: 70, right: 50, bottom: 50, left: 70 };
-    const width = 800;
-    const height = 800;
+    const margin = { top: 50, right: 150, bottom: 150, left: 150 };  // Increase all margins
+    const smallChartSize = 600;  // Size for each individual radar chart
+    const chartsPerRow = 2;  // Number of charts per row
+    
+    const category = d3.select("#category").property("value");
+    const destinations = currentlyShownDestinations[category];
+    const themes = ["Foods", "Attractions", "Scenery", "Services", "Atmospheres"];
+    
+    // Calculate grid layout dimensions
+    const numRows = Math.ceil(destinations.length / chartsPerRow);
+    const width = smallChartSize * chartsPerRow + margin.left + margin.right;
+    // Adjust height calculation to include proper spacing between rows
+    const height = (smallChartSize + margin.top) * numRows + margin.bottom;
 
     const svg = d3.select("#visualization svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom);
+        .attr("width", width)
+        .attr("height", height);
 
     svg.selectAll("*").remove();
 
-    const category = d3.select("#category").property("value");
-    const filteredData = data.filter(d => d.Category === category);
+    const filteredData = data.filter(d => 
+        d.Category === category && destinations.includes(d.Destination)
+    );
 
-    // Get unique destinations and themes
-    const destinations = Array.from(new Set(filteredData.map(d => d.Destination)));
-    const themes = ["Foods", "Attractions", "Scenery", "Services", "Atmospheres"];
+    destinations.forEach((destination, index) => {
+        // Calculate position in the grid with proper spacing
+        const row = Math.floor(index / chartsPerRow);
+        const col = index % chartsPerRow;
+        // Adjust translateX and translateY to ensure proper spacing
+        const translateX = col * (smallChartSize + margin.right) + margin.left;
+        const translateY = row * (smallChartSize + margin.top) + margin.top;
 
-    // Process data for radar chart
-    const firstDest = destinations[0];
-    const radarData = themes.map(theme => {
-        const match = filteredData.find(d => d.Destination === firstDest && d["Cognitive Theme"] === theme);
-        return {
-            theme: theme,
-            value: match ? parseFloat(match["Positive Sentiment"]) : 0,
-            count: match ? parseInt(match["Total Count"]) : 0
-        };
-    });
+        // Rest of the radar chart drawing code remains the same...
+        const chartGroup = svg.append("g")
+            .attr("transform", `translate(${translateX},${translateY})`);
 
-    // Radar chart parameters
-    const centerX = width / 2 + margin.left;
-    const centerY = height / 2 + margin.top;
-    const innerRadius = Math.min(width, height) / 4.5;  // Smaller inner circle
-    const outerRadius = Math.min(width, height) / 2.5;  // Bigger outer circle
-    const angleSlice = (Math.PI * 2) / themes.length;
-    const offsetAngle = angleSlice / 2;
+        // Process data for this destination
+        const destinationData = themes.map(theme => {
+            const match = filteredData.find(d => 
+                d.Destination === destination && d["Cognitive Theme"] === theme
+            );
+            return {
+                theme: theme,
+                value: match ? parseFloat(match["Positive Sentiment"]) : 0,
+                count: match ? parseInt(match["Total Count"]) : 0
+            };
+        });
 
-    // Define the themes and their associated words
-    const themeData = [
-        { 
-            theme: "Foods", 
-            words: ["Delicious", "Cuisine", "Restaurant", "Meals", "Fresh", "Menu", "Taste", "Local", "Dining", "Food"]
-        },
-        { 
-            theme: "Attractions", 
-            words: ["Sightseeing", "Tourist", "Historic", "Cultural", "Famous", "Popular", "Landmark", "Visit", "Monument", "Site"]
-        },
-        { 
-            theme: "Scenery", 
-            words: ["Beautiful", "Nature", "Landscape", "View", "Scenic", "Picture", "Natural", "Environment", "Stunning", "Visual"]
-        },
-        { 
-            theme: "Services", 
-            words: ["Staff", "Helpful", "Friendly", "Service", "Professional", "Clean", "Quality", "Efficient", "Support", "Care"]
-        },
-        { 
-            theme: "Atmosphere", 
-            words: ["Ambiance", "Comfortable", "Relaxing", "Peaceful", "Pleasant", "Quiet", "Cozy", "Modern", "Space", "Mood"]
-        }
-    ];
+        // Radar chart parameters
+        const centerX = smallChartSize / 2;
+        const centerY = smallChartSize / 2;
+        const innerRadius = smallChartSize / 4.5;
+        const outerRadius = smallChartSize / 2.5;
+        const angleSlice = (Math.PI * 2) / themes.length;
 
-    // Draw the two main circles
-    svg.append("circle")
-        .attr("cx", centerX)
-        .attr("cy", centerY)
-        .attr("r", innerRadius)
-        .attr("fill", "none")
-        .attr("stroke", "#ccc")
-        .attr("stroke-width", 1);
-
-    svg.append("circle")
-        .attr("cx", centerX)
-        .attr("cy", centerY)
-        .attr("r", outerRadius)
-        .attr("fill", "none")
-        .attr("stroke", "#ccc")
-        .attr("stroke-width", 1);
-
-    // Helper function to check word placement collision
-    function checkCollision(newX, newY, existingPositions, padding = 20) {
-        for (let pos of existingPositions) {
-            const dx = newX - pos.x;
-            const dy = newY - pos.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance < padding) return true;
-        }
-        return false;
-    }
-
-    // Draw divisions and word clouds
-    const existingWordPositions = [];
-    
-    themeData.forEach((theme, i) => {
-        const angle = i * angleSlice;
-        
-        // Inner circle division
-        const innerLineX = centerX + innerRadius * Math.cos(angle - Math.PI / 2);
-        const innerLineY = centerY + innerRadius * Math.sin(angle - Math.PI / 2);
-        
-        svg.append("line")
-            .attr("x1", centerX)
-            .attr("y1", centerY)
-            .attr("x2", innerLineX)
-            .attr("y2", innerLineY)
-            .attr("stroke", "#ccc")
-            .attr("stroke-width", 1);
-
-        // Outer circle division (dotted)
-        const outerAngle = angle + offsetAngle;
-        const innerX = centerX + innerRadius * Math.cos(outerAngle - Math.PI / 2);
-        const innerY = centerY + innerRadius * Math.sin(outerAngle - Math.PI / 2);
-        const outerX = centerX + outerRadius * Math.cos(outerAngle - Math.PI / 2);
-        const outerY = centerY + outerRadius * Math.sin(outerAngle - Math.PI / 2);
-
-        svg.append("line")
-            .attr("x1", innerX)
-            .attr("y1", innerY)
-            .attr("x2", outerX)
-            .attr("y2", outerY)
-            .attr("stroke", "#ccc")
-            .attr("stroke-dasharray", "4,4")
-            .attr("stroke-width", 1);
-
-        // Add theme label
-        svg.append("text")
-            .attr("x", centerX + (innerRadius - 20) * Math.cos(angle - Math.PI / 2))
-            .attr("y", centerY + (innerRadius - 20) * Math.sin(angle - Math.PI / 2))
+        // Add destination title
+        chartGroup.append("text")
+            .attr("x", centerX)
+            .attr("y", 1)
             .attr("text-anchor", "middle")
-            .attr("dominant-baseline", "middle")
             .style("font-size", "16px")
             .style("font-weight", "bold")
-            .style("fill", "#800080")
-            .text(theme.theme);
+            .text(destination);
 
-        // Add word cloud with improved positioning
-        const wordStartRadius = innerRadius + 40;
-        const wordEndRadius = outerRadius - 40;
-        const sectorPadding = angleSlice * 0.1; // 10% padding on each side of the sector
+        // Draw the circles
+        chartGroup.append("circle")
+            .attr("cx", centerX)
+            .attr("cy", centerY)
+            .attr("r", innerRadius)
+            .attr("fill", "none")
+            .attr("stroke", "#ccc")
+            .attr("stroke-width", 1);
 
-        theme.words.forEach((word, j) => {
-            let placed = false;
-            let attempts = 0;
-            const maxAttempts = 50;
+        chartGroup.append("circle")
+            .attr("cx", centerX)
+            .attr("cy", centerY)
+            .attr("r", outerRadius)
+            .attr("fill", "none")
+            .attr("stroke", "#ccc")
+            .attr("stroke-width", 1);
 
-            while (!placed && attempts < maxAttempts) {
-                const sectorStartAngle = angle - Math.PI/2 - angleSlice/2 + sectorPadding;
-                const sectorEndAngle = angle - Math.PI/2 + angleSlice/2 - sectorPadding;
-                
-                // Distribute words more evenly using j index
-                const baseRadius = wordStartRadius + (j / theme.words.length) * (wordEndRadius - wordStartRadius);
-                const radiusJitter = (Math.random() - 0.5) * (wordEndRadius - wordStartRadius) * 0.2;
-                const wordRadius = baseRadius + radiusJitter;
-                
-                // Calculate angle with controlled randomness
-                const angleRange = sectorEndAngle - sectorStartAngle;
-                const wordAngle = sectorStartAngle + (j / theme.words.length + Math.random() * 0.3) * angleRange;
+        // Draw axis lines
+        themes.forEach((theme, i) => {
+            const angle = i * angleSlice;
+            const lineX = centerX + outerRadius * Math.cos(angle - Math.PI / 2);
+            const lineY = centerY + outerRadius * Math.sin(angle - Math.PI / 2);
+            
+            chartGroup.append("line")
+                .attr("x1", centerX)
+                .attr("y1", centerY)
+                .attr("x2", lineX)
+                .attr("y2", lineY)
+                .attr("stroke", "#ccc")
+                .attr("stroke-width", 1);
 
-                const wordX = centerX + wordRadius * Math.cos(wordAngle);
-                const wordY = centerY + wordRadius * Math.sin(wordAngle);
-
-                if (!checkCollision(wordX, wordY, existingWordPositions)) {
-                    const fontSize = 11 + Math.random() * 3;
-
-                    svg.append("text")
-                        .attr("x", wordX)
-                        .attr("y", wordY)
-                        .attr("text-anchor", "middle")
-                        .attr("dominant-baseline", "middle")
-                        .style("font-size", `${fontSize}px`)
-                        .style("fill", "#666")
-                        .text(word);
-
-                    existingWordPositions.push({x: wordX, y: wordY});
-                    placed = true;
-                }
-                attempts++;
-            }
+            // Add theme labels
+            const labelRadius = outerRadius + 45;
+            const labelX = centerX + labelRadius * Math.cos(angle - Math.PI / 2);
+            const labelY = centerY + labelRadius * Math.sin(angle - Math.PI / 2);
+            
+            chartGroup.append("text")
+                .attr("x", labelX)
+                .attr("y", labelY)
+                .attr("text-anchor", "middle")
+                .attr("dominant-baseline", "middle")
+                .style("font-size", "12px")
+                .text(theme);
         });
-    });
 
-    // Scales for data points
-    const rScale = d3.scaleLinear()
-        .domain([0, 1])
-        .range([0, innerRadius * 0.6]);
+        // Scales for data points
+        const rScale = d3.scaleLinear()
+            .domain([0, 1])
+            .range([0, innerRadius * 0.8]);
 
-    const sizeScale = d3.scaleSqrt()
-        .domain([0, d3.max(radarData, d => d.count)])
-        .range([4, 20]);
+        // Calculate points for the radar
+        const points = destinationData.map((d, i) => {
+            const angle = i * angleSlice;
+            return {
+                x: centerX + rScale(d.value) * Math.cos(angle - Math.PI / 2),
+                y: centerY + rScale(d.value) * Math.sin(angle - Math.PI / 2),
+                value: d.value,
+                count: d.count
+            };
+        });
 
-    // Calculate points for the radar
-    const points = radarData.map((d, i) => {
-        const angle = i * angleSlice;
-        return {
-            x: centerX + rScale(d.value) * Math.cos(angle - Math.PI / 2),
-            y: centerY + rScale(d.value) * Math.sin(angle - Math.PI / 2),
-            value: d.value,
-            count: d.count
-        };
-    });
+        // Draw the filled polygon
+        const polygonPath = points.map((p, i) => {
+            return (i === 0 ? "M" : "L") + p.x + "," + p.y;
+        }).join("") + "Z";
 
-    // Draw the filled polygon
-    const polygonPath = points.map((p, i) => {
-        return (i === 0 ? "M" : "L") + p.x + "," + p.y;
-    }).join("") + "Z";
+        chartGroup.append("path")
+            .attr("d", polygonPath)
+            .attr("fill", "#800080")
+            .attr("fill-opacity", 0.2)
+            .attr("stroke", "#800080")
+            .attr("stroke-width", 1.5);
 
-    svg.append("path")
-        .attr("d", polygonPath)
-        .attr("fill", "#800080")
-        .attr("fill-opacity", 0.2)
-        .attr("stroke", "#800080")
-        .attr("stroke-width", 1.5);
+        // Add data points and labels
+        points.forEach((point, i) => {
+            chartGroup.append("circle")
+                .attr("cx", point.x)
+                .attr("cy", point.y)
+                .attr("r", 4)
+                .attr("fill", "#800080");
 
-    // Add labels for data points
-    points.forEach((point, i) => {
-        // Add value label
-        svg.append("text")
-            .attr("x", point.x)
-            .attr("y", point.y - 15)
-            .attr("text-anchor", "middle")
-            .style("font-size", "12px")
-            .text(point.value.toFixed(2));
+            chartGroup.append("text")
+                .attr("x", point.x)
+                .attr("y", point.y - 10)
+                .attr("text-anchor", "middle")
+                .style("font-size", "10px")
+                .text(point.value.toFixed(2));
 
-        // Add count label
-        svg.append("text")
-            .attr("x", point.x)
-            .attr("y", point.y + 15)
-            .attr("text-anchor", "middle")
-            .style("font-size", "10px")
-            .text(`n=${point.count}`);
+            chartGroup.append("text")
+                .attr("x", point.x)
+                .attr("y", point.y + 15)
+                .attr("text-anchor", "middle")
+                .style("font-size", "9px")
+                .text(`n=${point.count}`);
+        });
     });
 }
 
@@ -398,13 +388,50 @@ d3.csv("sentiment_matrix_historical.csv").then(function (data) {
     renderMatrix(data);
 
     d3.select("#category").on("change", function () {
-        const currentView = d3.select(".view-btn.selected").attr("id");
-        if (currentView === "overview") {
-            renderMatrix(data);
-        } else if (currentView === "radar_detail") {
-            renderRadarChart(data);
-        } else if (currentView === "time_series") {
-            renderTimeSeries(data);
+        const category = d3.select(this).property("value");
+        
+        // Reset currentlyShownDestinations for the new category if it doesn't exist
+        if (!currentlyShownDestinations[category]) {
+            d3.csv("sentiment_matrix_historical.csv").then(data => {
+                const allDestinations = Array.from(
+                    new Set(data.filter(d => d.Category === category).map(d => d.Destination))
+                );
+                currentlyShownDestinations[category] = allDestinations.slice(0, 5);
+                
+                // Update the interaction lists
+                updateSearchDropdown(allDestinations, currentlyShownDestinations[category]);
+                updateSelectedDestinations(currentlyShownDestinations[category]);
+                
+                // Get the current view and render appropriate visualization
+                const currentView = d3.select(".view-btn.selected").attr("id");
+                if (currentView === "overview") {
+                    renderMatrix(data);
+                } else if (currentView === "radar_detail") {
+                    renderRadarChart(data);
+                } else if (currentView === "time_series") {
+                    renderTimeSeries(data);
+                }
+            });
+        } else {
+            // If the category already exists, update lists and render current view
+            d3.csv("sentiment_matrix_historical.csv").then(data => {
+                const allDestinations = Array.from(
+                    new Set(data.filter(d => d.Category === category).map(d => d.Destination))
+                );
+                
+                // Update the interaction lists
+                updateSearchDropdown(allDestinations, currentlyShownDestinations[category]);
+                updateSelectedDestinations(currentlyShownDestinations[category]);
+                
+                const currentView = d3.select(".view-btn.selected").attr("id");
+                if (currentView === "overview") {
+                    renderMatrix(data);
+                } else if (currentView === "radar_detail") {
+                    renderRadarChart(data);
+                } else if (currentView === "time_series") {
+                    renderTimeSeries(data);
+                }
+            });
         }
     });
 });
