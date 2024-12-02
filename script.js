@@ -185,6 +185,25 @@ function removeDestination(destination) {
     });
 }
 
+function processWordCloudData(data, destination, theme) {
+    return data
+        .filter(d => d.Location === destination && d.Category === theme.toLowerCase())
+        .reduce((acc, curr) => {
+            const existing = acc.find(item => item.text === curr.Word);
+            if (existing) {
+                existing.size += curr.Frequency;
+            } else {
+                acc.push({
+                    text: curr.Word,
+                    size: curr.Frequency
+                });
+            }
+            return acc;
+        }, [])
+        .sort((a, b) => b.size - a.size)
+        .slice(0, 6);
+}
+
 function renderRadarChart(data) {
     const margin = { top: 50, right: 150, bottom: 150, left: 150 };  // Increase all margins
     const smallChartSize = 600;  // Size for each individual radar chart
@@ -209,7 +228,7 @@ function renderRadarChart(data) {
     const filteredData = data.filter(d => 
         d.Category === category && destinations.includes(d.Destination)
     );
-
+    d3.csv("location_words_frequency.csv").then(function (wordCloudData) {
     destinations.forEach((destination, index) => {
         // Calculate position in the grid with proper spacing
         const row = Math.floor(index / chartsPerRow);
@@ -294,7 +313,26 @@ function renderRadarChart(data) {
                 .style("font-size", "12px")
                 .text(theme);
         });
+        themes.forEach((theme, i) => {
+            const angle = i * angleSlice;
+            const wordCloudX = centerX + (outerRadius + 100) * Math.cos(angle - Math.PI / 2);
+            const wordCloudY = centerY + (outerRadius + 100) * Math.sin(angle - Math.PI / 2);
 
+            const wordCloudGroup = chartGroup.append("g")
+                .attr("transform", `translate(${wordCloudX},${wordCloudY})`);
+
+            const processedData = processWordCloudData(wordCloudData, destination, theme);
+
+            // Add word cloud
+            wordCloudGroup.selectAll("text")
+                .data(processedData)
+                .enter()
+                .append("text")
+                .attr("text-anchor", "middle")
+                .attr("transform", (d, i) => `translate(0,${i * 15})`)
+                .style("font-size", d => `${d.size / 10}px`)
+                .text(d => d.text);
+        });
         // Scales for data points
         const rScale = d3.scaleLinear()
             .domain([0, 1])
@@ -346,227 +384,7 @@ function renderRadarChart(data) {
                 .text(`n=${point.count}`);
         });
     });
-}
-
-function renderTimeSeries(data) {
-  const margin = { top: 60, right: 50, bottom: 50, left: 220 };
-  const cellWidth = 80;
-  const cellHeight = 60;
-  const padding = 20;
-
-  const category = d3.select("#category").property("value");
-  const destinations = currentlyShownDestinations[category] || [];
-  const years = [
-    "2010",
-    "2011",
-    "2012",
-    "2013",
-    "2014",
-    "2015",
-    "2016",
-    "2017",
-    "2018",
-    "2019",
-    "2020",
-  ];
-
-  const width =
-    years.length * (cellWidth + padding) + margin.left + margin.right;
-  const height =
-    destinations.length * (cellHeight + padding) + margin.top + margin.bottom;
-
-  // Create SVG
-  const svg = d3
-    .select("#visualization svg")
-    .attr("width", width)
-    .attr("height", height);
-
-  svg.selectAll("*").remove();
-
-  // Calculate rankings and positions for each year
-  const yearlyRankings = {};
-  years.forEach((year) => {
-    const yearData = data.filter(
-      (d) =>
-        d.Year === year &&
-        destinations.includes(d.Destination) &&
-        d["Cognitive Theme"] === "Atmospheres"
-    );
-
-    // Sort by positive sentiment for ranking
-    const sorted = [...yearData].sort(
-      (a, b) => b["Positive Sentiment"] - a["Positive Sentiment"]
-    );
-    yearlyRankings[year] = {};
-    sorted.forEach((d, i) => {
-      yearlyRankings[year][d.Destination] = i;
-    });
-  });
-
-  // Create scales
-  const xScale = d3
-    .scaleBand()
-    .domain(years)
-    .range([margin.left, width - margin.right])
-    .padding(0.3);
-
-  const yScale = d3
-    .scaleLinear()
-    .domain([0, destinations.length - 1])
-    .range([margin.top, height - margin.bottom]);
-
-  // Draw flow paths first
-  destinations.forEach((dest) => {
-    const points = years.map((year) => ({
-      x: xScale(year) + xScale.bandwidth() / 2,
-      y: yScale(yearlyRankings[year][dest]),
-    }));
-
-    // Background flow path
-    svg
-      .append("path")
-      .attr("class", "flow-path")
-      .attr(
-        "d",
-        d3
-          .line()
-          .x((d) => d.x)
-          .y((d) => d.y)
-          .curve(d3.curveBasis)(points)
-      )
-      .attr("fill", "none")
-      .attr("stroke", "#e0e0e0")
-      .attr("stroke-width", cellHeight / 2)
-      .attr("opacity", 0.3)
-      .attr("data-destination", dest);
-  });
-
-  // Color scales
-  const positiveColor = d3
-    .scaleLinear()
-    .domain([0.5, 1])
-    .range(["#e5f5e0", "#31a354"]);
-
-  const negativeColor = d3
-    .scaleLinear()
-    .domain([0, 0.5])
-    .range(["#fee0d2", "#de2d26"]);
-
-  // Draw cells and labels
-  years.forEach((year) => {
-    destinations.forEach((dest) => {
-      const cellData = data.find(
-        (d) =>
-          d.Year === year &&
-          d.Destination === dest &&
-          d["Cognitive Theme"] === "Atmospheres"
-      );
-
-      if (cellData) {
-        const yPos = yScale(yearlyRankings[year][dest]);
-
-        const group = svg
-          .append("g")
-          .attr("class", "matrix-cell")
-          .attr(
-            "transform",
-            `translate(
-            ${xScale(year)},
-            ${yPos - cellHeight / 2}
-          )`
-          )
-          .attr("data-destination", dest);
-
-        // Left (positive) rectangle
-        group
-          .append("rect")
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", cellWidth / 2)
-          .attr("height", cellHeight)
-          .attr("fill", positiveColor(cellData["Positive Sentiment"]));
-
-        // Right (negative) rectangle
-        group
-          .append("rect")
-          .attr("x", cellWidth / 2)
-          .attr("y", 0)
-          .attr("width", cellWidth / 2)
-          .attr("height", cellHeight)
-          .attr("fill", negativeColor(cellData["Negative Sentiment"]));
-
-        // Inner positive rectangle
-        const positiveRatio =
-          cellData["Positive Count"] / (cellData["Total Count"] * 2);
-        group
-          .append("rect")
-          .attr("x", cellWidth / 4 - (cellWidth / 4) * positiveRatio)
-          .attr("y", cellHeight / 4)
-          .attr("width", (cellWidth / 2) * positiveRatio)
-          .attr("height", cellHeight / 2)
-          .attr("fill", "#2b8c3a");
-
-        // Inner negative rectangle
-        const negativeRatio =
-          cellData["Negative Count"] / (cellData["Total Count"] * 2);
-        group
-          .append("rect")
-          .attr("x", cellWidth / 2)
-          .attr("y", cellHeight / 4)
-          .attr("width", (cellWidth / 2) * negativeRatio)
-          .attr("height", cellHeight / 2)
-          .attr("fill", "#c22525");
-
-        // Add destination label for first year only
-        if (year === years[0]) {
-          group
-            .append("text")
-            .attr("x", -10)
-            .attr("y", cellHeight / 2)
-            .attr("text-anchor", "end")
-            .attr("alignment-baseline", "middle")
-            .style("font-size", "12px")
-            .text(dest);
-        }
-      }
-    });
-  });
-
-  // Add hover interactions
-  svg
-    .selectAll(".matrix-cell")
-    .on("mouseover", function () {
-      const dest = d3.select(this).attr("data-destination");
-
-      // Dim all paths and cells
-      svg.selectAll(".flow-path").attr("opacity", 0.1);
-      svg.selectAll(".matrix-cell").style("opacity", 0.3);
-
-      // Highlight selected destination
-      svg
-        .selectAll(`.flow-path[data-destination="${dest}"]`)
-        .attr("opacity", 0.8)
-        .attr("stroke", "#fff");
-      svg
-        .selectAll(`.matrix-cell[data-destination="${dest}"]`)
-        .style("opacity", 1);
-    })
-    .on("mouseout", function () {
-      // Reset everything
-      svg
-        .selectAll(".flow-path")
-        .attr("opacity", 0.3)
-        .attr("stroke", "#e0e0e0");
-      svg.selectAll(".matrix-cell").style("opacity", 1);
-    });
-
-  // Add year labels only
-  svg
-    .append("g")
-    .attr("transform", `translate(0,${margin.top})`)
-    .call(d3.axisTop(xScale))
-    .selectAll("text")
-    .style("font-size", "12px");
+});
 }
 
 function selectView(viewType) {
