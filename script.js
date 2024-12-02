@@ -208,10 +208,11 @@ function renderRadarChart(data) {
     const margin = { top: 100, right: 100, bottom: 100, left: 100 };
     const width = 800;
     const height = 800;
+    const titleMargin = 50;
 
     const svg = d3.select("#visualization svg")
         .attr("width", width)
-        .attr("height", height);
+        .attr("height", height + titleMargin);
 
     svg.selectAll("*").remove();
 
@@ -224,13 +225,12 @@ function renderRadarChart(data) {
     );
 
     const chartGroup = svg.append("g")
-        .attr("transform", `translate(${width / 2},${height / 2})`);
+        .attr("transform", `translate(${width / 2},${height / 2 + titleMargin/2})`);
 
     const innerRadius = Math.min(width, height) / 4;
     const outerRadius = Math.min(width, height) / 2.2;
     const angleSlice = (Math.PI * 2) / themes.length;
 
-    // Draw the circles
     chartGroup.append("circle")
         .attr("r", innerRadius)
         .attr("fill", "none")
@@ -243,7 +243,6 @@ function renderRadarChart(data) {
         .attr("stroke", "#ccc")
         .attr("stroke-width", 1);
 
-    // Draw inner axis lines
     themes.forEach((theme, i) => {
         const angle = i * angleSlice;
         const lineX = innerRadius * Math.cos(angle - Math.PI / 2);
@@ -258,7 +257,6 @@ function renderRadarChart(data) {
             .attr("stroke-width", 1);
     });
 
-    // Draw outer axis lines
     themes.forEach((theme, i) => {
         const angle = (i + 0.5) * angleSlice;
         const lineStartX = innerRadius * Math.cos(angle - Math.PI / 2);
@@ -275,7 +273,6 @@ function renderRadarChart(data) {
             .attr("stroke-width", 1);
     });
 
-    // Add theme labels for inner circle
     themes.forEach((theme, i) => {
         const angle = i * angleSlice;
         const innerLabelRadius = innerRadius * 0.85;
@@ -291,11 +288,49 @@ function renderRadarChart(data) {
             .text(theme);
     });
 
-    const rScale = d3.scaleLinear()
-        .domain([0, 1])
-        .range([0, innerRadius * 0.8]);
+    const sentimentValues = filteredData.map(d => parseFloat(d["Positive Sentiment"]));
+    const minSentiment = d3.min(sentimentValues);
+    const maxSentiment = d3.max(sentimentValues);
+
+    const rScale = d3.scalePow()
+        .exponent(0.3)
+        .domain([minSentiment, maxSentiment])
+        .range([innerRadius * 0.05, innerRadius * 0.95]);
 
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+
+    const legendGroup = svg.append("g")
+    .attr("class", "legend")
+    .attr("transform", `translate(${width - margin.right-30}, ${titleMargin-40})`);
+
+    const legendItems = legendGroup.selectAll(".legend-item")
+        .data(destinations)
+        .enter()
+        .append("g")
+        .attr("class", "legend-item")
+        .attr("transform", (d, i) => `translate(0, ${i * 25})`);
+
+    legendItems.append("rect")
+        .attr("width", 15)
+        .attr("height", 15)
+        .attr("fill", (d, i) => colorScale(i));
+
+    legendItems.append("text")
+        .attr("x", 20)
+        .attr("y", 12)
+        .style("font-size", "14px")
+        .text(d => d);
+
+    const legendBBox = legendGroup.node().getBBox();
+    legendGroup.insert("rect", ":first-child")
+        .attr("x", -10)
+        .attr("y", -10)
+        .attr("width", legendBBox.width + 20)
+        .attr("height", legendBBox.height + 20)
+        .attr("fill", "white")
+        .attr("fill-opacity", 0.8)
+        .attr("stroke", "#ccc")
+        .attr("stroke-width", 1);
 
     destinations.forEach((destination, index) => {
         const destinationData = themes.map(theme => {
@@ -304,16 +339,17 @@ function renderRadarChart(data) {
             );
             return {
                 theme: theme,
-                value: match ? parseFloat(match["Positive Sentiment"]) : 0,
+                value: match ? parseFloat(match["Positive Sentiment"]) : minSentiment,
                 count: match ? parseInt(match["Total Count"]) : 0
             };
         });
 
         const points = destinationData.map((d, i) => {
-            const angle = i * angleSlice;  // Changed from (i + 0.5)
+            const angle = i * angleSlice;
+            const radius = rScale(d.value);
             return {
-                x: rScale(d.value) * Math.cos(angle - Math.PI / 2),
-                y: rScale(d.value) * Math.sin(angle - Math.PI / 2),
+                x: radius * Math.cos(angle - Math.PI / 2),
+                y: radius * Math.sin(angle - Math.PI / 2),
                 value: d.value,
                 count: d.count
             };
@@ -337,22 +373,19 @@ function renderRadarChart(data) {
     });
 
     function showWordCloudAndLabels(destination, destinationData, points) {
-        // Remove existing word cloud, labels, and destination name
         chartGroup.selectAll(".word-cloud").remove();
         chartGroup.selectAll(".data-label").remove();
         svg.selectAll(".destination-name").remove();
 
-        // Add destination title
         svg.append("text")
             .attr("class", "destination-name")
             .attr("x", width / 2)
-            .attr("y", margin.top / 2)
+            .attr("y", titleMargin / 2)
             .attr("text-anchor", "middle")
             .style("font-size", "20px")
             .style("font-weight", "bold")
             .text(destination);
 
-        // Add data points and labels
         points.forEach((point, i) => {
             chartGroup.append("text")
                 .attr("class", "data-label")
@@ -360,7 +393,7 @@ function renderRadarChart(data) {
                 .attr("y", point.y - 10)
                 .attr("text-anchor", "middle")
                 .style("font-size", "10px")
-                .text(point.value.toFixed(2));
+                .text(point.value.toFixed(3));
 
             chartGroup.append("text")
                 .attr("class", "data-label")
@@ -371,7 +404,6 @@ function renderRadarChart(data) {
                 .text(`n=${point.count}`);
         });
 
-        // Add word cloud
         d3.csv("location_words_frequency.csv").then(function (wordCloudData) {
             themes.forEach((theme, i) => {
                 const angle = (i + 0.5) * angleSlice;
@@ -387,7 +419,7 @@ function renderRadarChart(data) {
         
                 const fontSizeScale = d3.scaleLinear()
                     .domain([0, d3.max(processedData, d => d.size)])
-                    .range([10, 20]);
+                    .range([8, 16]);
         
                 const words = wordCloudGroup.selectAll("text")
                     .data(processedData)
@@ -398,14 +430,54 @@ function renderRadarChart(data) {
                     .style("fill", colorScale(destinations.indexOf(destination)))
                     .text(d => d.text);
         
-                // Calculate positions with better spacing
-                processedData.forEach((d, i) => {
-                    const spacing = (sectorEndAngle - sectorStartAngle) / (processedData.length);
-                    const angle = sectorStartAngle + spacing * (i + 0.5);
-                    const radius = sectorInnerRadius - 100 + (sectorOuterRadius - sectorInnerRadius) * 0.3;
-                    d.x = radius * Math.cos(angle);
-                    d.y = radius * Math.sin(angle);
-                });
+                    processedData.forEach((d, i) => {
+                        // Define fixed positions for each word (1st through 5th) in each sector
+                        const positions = {
+                            'Foods': [
+                                { radius: -0.4, angleOffset: 0.85 },  // More negative radius
+                                { radius: -0.5, angleOffset: 0.5 },
+                                { radius: -0.4, angleOffset: 0.2 },
+                                { radius: -0.6, angleOffset: 0.7 },
+                                { radius: -0.6, angleOffset: 0.3 }
+                            ],
+                            'Attractions': [
+                                { radius: -0.4, angleOffset: 0.85 },
+                                { radius: -0.5, angleOffset: 0.5 },
+                                { radius: -0.4, angleOffset: 0.2 },
+                                { radius: -0.6, angleOffset: 0.7 },
+                                { radius: -0.6, angleOffset: 0.3 }
+                            ],
+                            'Scenery': [
+                                { radius: -0.4, angleOffset: 0.85 },
+                                { radius: -0.5, angleOffset: 0.5 },
+                                { radius: -0.4, angleOffset: 0.2 },
+                                { radius: -0.6, angleOffset: 0.7 },
+                                { radius: -0.6, angleOffset: 0.3 }
+                            ],
+                            'Services': [
+                                { radius: -0.4, angleOffset: 0.85 },
+                                { radius: -0.5, angleOffset: 0.5 },
+                                { radius: -0.4, angleOffset: 0.2 },
+                                { radius: -0.6, angleOffset: 0.7 },
+                                { radius: -0.6, angleOffset: 0.3 }
+                            ],
+                            'Atmospheres': [
+                                { radius: -0.4, angleOffset: 0.85 },
+                                { radius: -0.5, angleOffset: 0.5 },
+                                { radius: -0.4, angleOffset: 0.2 },
+                                { radius: -0.6, angleOffset: 0.7 },
+                                { radius: -0.6, angleOffset: 0.3 }
+                            ]
+                        };
+                    
+                        const sectorMiddleAngle = (sectorStartAngle + sectorEndAngle) / 2;
+                        const pos = positions[theme][i];
+                        const radius = (sectorOuterRadius - sectorInnerRadius) * pos.radius + sectorInnerRadius;
+                        const angle = sectorMiddleAngle - pos.angleOffset;
+                        
+                        d.x = radius * Math.cos(angle - Math.PI / 2);
+                        d.y = radius * Math.sin(angle - Math.PI / 2);
+                    });
         
                 words
                     .attr("transform", d => `translate(${d.x},${d.y})`)
