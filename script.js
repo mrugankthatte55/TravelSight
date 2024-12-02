@@ -201,23 +201,13 @@ function processWordCloudData(data, destination, theme) {
             return acc;
         }, [])
         .sort((a, b) => b.size - a.size)
-        .slice(0, 6);
+        .slice(0, 5);
 }
 
 function renderRadarChart(data) {
-    const margin = { top: 50, right: 150, bottom: 150, left: 150 };  // Increase all margins
-    const smallChartSize = 600;  // Size for each individual radar chart
-    const chartsPerRow = 2;  // Number of charts per row
-    
-    const category = d3.select("#category").property("value");
-    const destinations = currentlyShownDestinations[category];
-    const themes = ["Foods", "Attractions", "Scenery", "Services", "Atmospheres"];
-    
-    // Calculate grid layout dimensions
-    const numRows = Math.ceil(destinations.length / chartsPerRow);
-    const width = smallChartSize * chartsPerRow + margin.left + margin.right;
-    // Adjust height calculation to include proper spacing between rows
-    const height = (smallChartSize + margin.top) * numRows + margin.bottom;
+    const margin = { top: 100, right: 100, bottom: 100, left: 100 };
+    const width = 800;
+    const height = 800;
 
     const svg = d3.select("#visualization svg")
         .attr("width", width)
@@ -225,23 +215,89 @@ function renderRadarChart(data) {
 
     svg.selectAll("*").remove();
 
+    const category = d3.select("#category").property("value");
+    const destinations = currentlyShownDestinations[category];
+    const themes = ["Foods", "Attractions", "Scenery", "Services", "Atmospheres"];
+
     const filteredData = data.filter(d => 
         d.Category === category && destinations.includes(d.Destination)
     );
-    d3.csv("location_words_frequency.csv").then(function (wordCloudData) {
+
+    const chartGroup = svg.append("g")
+        .attr("transform", `translate(${width / 2},${height / 2})`);
+
+    const innerRadius = Math.min(width, height) / 4;
+    const outerRadius = Math.min(width, height) / 2.2;
+    const angleSlice = (Math.PI * 2) / themes.length;
+
+    // Draw the circles
+    chartGroup.append("circle")
+        .attr("r", innerRadius)
+        .attr("fill", "none")
+        .attr("stroke", "#ccc")
+        .attr("stroke-width", 1);
+
+    chartGroup.append("circle")
+        .attr("r", outerRadius)
+        .attr("fill", "none")
+        .attr("stroke", "#ccc")
+        .attr("stroke-width", 1);
+
+    // Draw inner axis lines
+    themes.forEach((theme, i) => {
+        const angle = i * angleSlice;
+        const lineX = innerRadius * Math.cos(angle - Math.PI / 2);
+        const lineY = innerRadius * Math.sin(angle - Math.PI / 2);
+
+        chartGroup.append("line")
+            .attr("x1", 0)
+            .attr("y1", 0)
+            .attr("x2", lineX)
+            .attr("y2", lineY)
+            .attr("stroke", "#ccc")
+            .attr("stroke-width", 1);
+    });
+
+    // Draw outer axis lines
+    themes.forEach((theme, i) => {
+        const angle = (i + 0.5) * angleSlice;
+        const lineStartX = innerRadius * Math.cos(angle - Math.PI / 2);
+        const lineStartY = innerRadius * Math.sin(angle - Math.PI / 2);
+        const lineEndX = outerRadius * Math.cos(angle - Math.PI / 2);
+        const lineEndY = outerRadius * Math.sin(angle - Math.PI / 2);
+
+        chartGroup.append("line")
+            .attr("x1", lineStartX)
+            .attr("y1", lineStartY)
+            .attr("x2", lineEndX)
+            .attr("y2", lineEndY)
+            .attr("stroke", "#ccc")
+            .attr("stroke-width", 1);
+    });
+
+    // Add theme labels for inner circle
+    themes.forEach((theme, i) => {
+        const angle = i * angleSlice;
+        const innerLabelRadius = innerRadius * 0.85;
+        const innerLabelX = innerLabelRadius * Math.cos(angle - Math.PI / 2);
+        const innerLabelY = innerLabelRadius * Math.sin(angle - Math.PI / 2);
+
+        chartGroup.append("text")
+            .attr("x", innerLabelX)
+            .attr("y", innerLabelY)
+            .attr("text-anchor", "middle")
+            .attr("dominant-baseline", "middle")
+            .style("font-size", "12px")
+            .text(theme);
+    });
+
+    const rScale = d3.scaleLinear()
+        .domain([0, 1])
+        .range([0, innerRadius * 0.8]);
+
+    const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+
     destinations.forEach((destination, index) => {
-        // Calculate position in the grid with proper spacing
-        const row = Math.floor(index / chartsPerRow);
-        const col = index % chartsPerRow;
-        // Adjust translateX and translateY to ensure proper spacing
-        const translateX = col * (smallChartSize + margin.right) + margin.left;
-        const translateY = row * (smallChartSize + margin.top) + margin.top;
-
-        // Rest of the radar chart drawing code remains the same...
-        const chartGroup = svg.append("g")
-            .attr("transform", `translate(${translateX},${translateY})`);
-
-        // Process data for this destination
         const destinationData = themes.map(theme => {
             const match = filteredData.find(d => 
                 d.Destination === destination && d["Cognitive Theme"] === theme
@@ -253,123 +309,53 @@ function renderRadarChart(data) {
             };
         });
 
-        // Radar chart parameters
-        const centerX = smallChartSize / 2;
-        const centerY = smallChartSize / 2;
-        const innerRadius = smallChartSize / 4.5;
-        const outerRadius = smallChartSize / 2.5;
-        const angleSlice = (Math.PI * 2) / themes.length;
-
-        // Add destination title
-        chartGroup.append("text")
-            .attr("x", centerX)
-            .attr("y", 1)
-            .attr("text-anchor", "middle")
-            .style("font-size", "16px")
-            .style("font-weight", "bold")
-            .text(destination);
-
-        // Draw the circles
-        chartGroup.append("circle")
-            .attr("cx", centerX)
-            .attr("cy", centerY)
-            .attr("r", innerRadius)
-            .attr("fill", "none")
-            .attr("stroke", "#ccc")
-            .attr("stroke-width", 1);
-
-        chartGroup.append("circle")
-            .attr("cx", centerX)
-            .attr("cy", centerY)
-            .attr("r", outerRadius)
-            .attr("fill", "none")
-            .attr("stroke", "#ccc")
-            .attr("stroke-width", 1);
-
-        // Draw axis lines
-        themes.forEach((theme, i) => {
-            const angle = i * angleSlice;
-            const lineX = centerX + outerRadius * Math.cos(angle - Math.PI / 2);
-            const lineY = centerY + outerRadius * Math.sin(angle - Math.PI / 2);
-            
-            chartGroup.append("line")
-                .attr("x1", centerX)
-                .attr("y1", centerY)
-                .attr("x2", lineX)
-                .attr("y2", lineY)
-                .attr("stroke", "#ccc")
-                .attr("stroke-width", 1);
-
-            // Add theme labels
-            const labelRadius = outerRadius + 45;
-            const labelX = centerX + labelRadius * Math.cos(angle - Math.PI / 2);
-            const labelY = centerY + labelRadius * Math.sin(angle - Math.PI / 2);
-            
-            chartGroup.append("text")
-                .attr("x", labelX)
-                .attr("y", labelY)
-                .attr("text-anchor", "middle")
-                .attr("dominant-baseline", "middle")
-                .style("font-size", "12px")
-                .text(theme);
-        });
-        themes.forEach((theme, i) => {
-            const angle = i * angleSlice;
-            const wordCloudX = centerX + (outerRadius + 100) * Math.cos(angle - Math.PI / 2);
-            const wordCloudY = centerY + (outerRadius + 100) * Math.sin(angle - Math.PI / 2);
-
-            const wordCloudGroup = chartGroup.append("g")
-                .attr("transform", `translate(${wordCloudX},${wordCloudY})`);
-
-            const processedData = processWordCloudData(wordCloudData, destination, theme);
-
-            // Add word cloud
-            wordCloudGroup.selectAll("text")
-                .data(processedData)
-                .enter()
-                .append("text")
-                .attr("text-anchor", "middle")
-                .attr("transform", (d, i) => `translate(0,${i * 15})`)
-                .style("font-size", d => `${d.size / 10}px`)
-                .text(d => d.text);
-        });
-        // Scales for data points
-        const rScale = d3.scaleLinear()
-            .domain([0, 1])
-            .range([0, innerRadius * 0.8]);
-
-        // Calculate points for the radar
         const points = destinationData.map((d, i) => {
-            const angle = i * angleSlice;
+            const angle = i * angleSlice;  // Changed from (i + 0.5)
             return {
-                x: centerX + rScale(d.value) * Math.cos(angle - Math.PI / 2),
-                y: centerY + rScale(d.value) * Math.sin(angle - Math.PI / 2),
+                x: rScale(d.value) * Math.cos(angle - Math.PI / 2),
+                y: rScale(d.value) * Math.sin(angle - Math.PI / 2),
                 value: d.value,
                 count: d.count
             };
         });
 
-        // Draw the filled polygon
         const polygonPath = points.map((p, i) => {
             return (i === 0 ? "M" : "L") + p.x + "," + p.y;
         }).join("") + "Z";
 
         chartGroup.append("path")
             .attr("d", polygonPath)
-            .attr("fill", "#800080")
-            .attr("fill-opacity", 0.2)
-            .attr("stroke", "#800080")
-            .attr("stroke-width", 1.5);
+            .attr("fill", colorScale(index))
+            .attr("fill-opacity", 0)
+            .attr("stroke", colorScale(index))
+            .attr("stroke-width", 1.5)
+            .attr("data-destination", destination)
+            .on("click", function() {
+                const clickedDestination = d3.select(this).attr("data-destination");
+                showWordCloudAndLabels(clickedDestination, destinationData, points);
+            });
+    });
+
+    function showWordCloudAndLabels(destination, destinationData, points) {
+        // Remove existing word cloud, labels, and destination name
+        chartGroup.selectAll(".word-cloud").remove();
+        chartGroup.selectAll(".data-label").remove();
+        svg.selectAll(".destination-name").remove();
+
+        // Add destination title
+        svg.append("text")
+            .attr("class", "destination-name")
+            .attr("x", width / 2)
+            .attr("y", margin.top / 2)
+            .attr("text-anchor", "middle")
+            .style("font-size", "20px")
+            .style("font-weight", "bold")
+            .text(destination);
 
         // Add data points and labels
         points.forEach((point, i) => {
-            chartGroup.append("circle")
-                .attr("cx", point.x)
-                .attr("cy", point.y)
-                .attr("r", 4)
-                .attr("fill", "#800080");
-
             chartGroup.append("text")
+                .attr("class", "data-label")
                 .attr("x", point.x)
                 .attr("y", point.y - 10)
                 .attr("text-anchor", "middle")
@@ -377,14 +363,56 @@ function renderRadarChart(data) {
                 .text(point.value.toFixed(2));
 
             chartGroup.append("text")
+                .attr("class", "data-label")
                 .attr("x", point.x)
                 .attr("y", point.y + 15)
                 .attr("text-anchor", "middle")
                 .style("font-size", "9px")
                 .text(`n=${point.count}`);
         });
-    });
-});
+
+        // Add word cloud
+        d3.csv("location_words_frequency.csv").then(function (wordCloudData) {
+            themes.forEach((theme, i) => {
+                const angle = (i + 0.5) * angleSlice;
+                const sectorStartAngle = angle - angleSlice / 2;
+                const sectorEndAngle = angle + angleSlice / 2;
+                const sectorInnerRadius = outerRadius;
+                const sectorOuterRadius = outerRadius + 100;
+        
+                const wordCloudGroup = chartGroup.append("g")
+                    .attr("class", "word-cloud");
+        
+                const processedData = processWordCloudData(wordCloudData, destination, theme);
+        
+                const fontSizeScale = d3.scaleLinear()
+                    .domain([0, d3.max(processedData, d => d.size)])
+                    .range([10, 20]);
+        
+                const words = wordCloudGroup.selectAll("text")
+                    .data(processedData)
+                    .enter()
+                    .append("text")
+                    .attr("text-anchor", "middle")
+                    .style("font-size", d => `${fontSizeScale(d.size)}px`)
+                    .style("fill", colorScale(destinations.indexOf(destination)))
+                    .text(d => d.text);
+        
+                // Calculate positions with better spacing
+                processedData.forEach((d, i) => {
+                    const spacing = (sectorEndAngle - sectorStartAngle) / (processedData.length);
+                    const angle = sectorStartAngle + spacing * (i + 0.5);
+                    const radius = sectorInnerRadius - 100 + (sectorOuterRadius - sectorInnerRadius) * 0.3;
+                    d.x = radius * Math.cos(angle);
+                    d.y = radius * Math.sin(angle);
+                });
+        
+                words
+                    .attr("transform", d => `translate(${d.x},${d.y})`)
+                    .style("text-anchor", "middle");
+            });
+        });
+    }
 }
 
 function selectView(viewType) {
